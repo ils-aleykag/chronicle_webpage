@@ -7,171 +7,246 @@ background-size: cover;
     width:350px;
     height: 90px;
     margin-top: 250px;
+    margin-left: 95px;
 }
-.input-group-text {
-    display: inline-block;
-  }
-  
 .card-group{
-    display: flex;
-    justify-content: space-evenly;
-    overflow-y:hidden;
-   left: 1000px;
-   width: 71%;
-   height: 454px;
-   background: #FFFFFF 0% 0% no-repeat padding-box;
-   box-shadow: 0px 1px 6px #00000029;
-   border-radius: 10px;
-   padding: 15px;
-  /* margin-left: 50px; */
-   margin-top: 100px;
-   border: none;
-}
-.login{
-height: 33px;
-text-align: left;
-font: normal normal bold 24px/33px Open Sans;
-letter-spacing: 0px;
-color: #000000;
-text-transform: uppercase;
-opacity: 1;
-}
-.textemail{
-width: 283px;
-height: 48px;
-text-align: left;
-font: normal normal normal 18px/24px Open Sans;
-letter-spacing: 0px;
-color: #000000;
-opacity: 0.5;
+  display: flex;
+  justify-content: space-evenly;
+  left: 1000px;
+  width: 350px;
+  height: 450px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 6px #00000029;
+  border-radius: 10px;
+  padding: 15px;
+  margin-left: 112px;
+  margin-top: 112px;
+  border: none;
 }
 .login-section{
-    border: none;
+  border: none;
 }
-.input-group-text{
-width: 55px;
-height: 39px;
-background: #F7FAFF 0% 0% no-repeat padding-box;
-border: 1px solid #DDDDDD;
-border-radius: 3px;
-opacity: 1;
+.card-body{
+  width: 325px;
+  height: 432px;
 }
-#input_img_1{
-width: 20px;
-height: 16px;
-background: transparent url('img/email.png') 0% 0% no-repeat padding-box;
-opacity: 1;
+.login{
+  height: 33px;
+  text-align: left;
+  font: normal normal bold 24px/33px Open Sans;
+  letter-spacing: 0px;
+  color: #000000;
+  text-transform: uppercase;
+  opacity: 1;
 }
-#input_img_2{
-    width: 16px;
-    height: 20px;
-    background: transparent url('img/padlock.png') 0% 0% no-repeat padding-box;
-    opacity: 1;
+.textemail{
+  width: 283px;
+  height: 48px;
+  text-align: left;
+  font: normal normal normal 18px/24px Open Sans;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 0.5;
 }
-#email{
-width: 63px;
-height: 39px;
-text-align: left;
-font: normal normal 600 16px/22px Open Sans;
-letter-spacing: 0px;
-color: #222222;
-opacity: 1;
+.input-group{
+  background: #F7FAFF 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+  opacity: 1;
 }
-#password{
-width: 63px;
-height: 39px;
-text-align: left;
-font: normal normal 600 16px/22px Open Sans;
-letter-spacing: 0px;
-color: #222222;
-opacity: 1;
-}
-.login-btn{
-      background: transparent linear-gradient(270deg, #386CB5 0%, #669FED 100%) 0% 0% no-repeat padding-box;
-      box-shadow: 0px 0px 5px #386CB566;
-      border-radius: 6px;
-      opacity: 1;
-      color: white;
-      height: 40px;
-      text-align: center;
-      padding: 12px;
-      font-size: 12px;
-      border: none;
-      width: 100%;
-      margin-top: 30px;
-  }
-.logintxt{
-font: normal normal 600 16px/22px Open Sans;
-letter-spacing: 0px;
-color: #FFFFFF;
-text-transform: uppercase;
-opacity: 1;
-}
-#Dacct{
-width: 179px;
-text-align: left;
-font: normal normal 550 16px/37px Open Sans;
-letter-spacing: 0px;
-color: #000000;
-opacity: 1;
-height: 37px;
-}
-.register-btn{
-    
-    height: 43px;
-    background: #FEC006 0% 0% no-repeat padding-box;
-    box-shadow: 0px 1px 10px #0000001A;
+.input-group-img {
+    display: inline-block;
+    /*width: 55px; */
+    height: 39px;
+    /*background: #F7FAFF 0% 0% no-repeat padding-box;*/
+    border: 1px solid #DDDDDD;
     border-radius: 6px;
     opacity: 1;
-    border: none;
-  }
-.regtext{
-    text-align: left;
-    font: normal normal  40 15px/10px Open Sans;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    opacity: 1;
-  }
+}
+#eyes-border{
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+#input_img_1{
+  width: 20px;
+  height: 16px;
+  background: transparent url('img/email.png') 0% 0% no-repeat padding-box;
+  opacity: 1;
+  margin-left: 13px;
+  margin-top: 6px;
+}
+#input_img_2{
+  width: 16px;
+  height: 20px;
+  background: transparent url('img/padlock.png') 0% 0% no-repeat padding-box;
+  opacity: 1;
+  margin-left: 13px;
+  margin-top: 6px;
+}
+#contact-email{
+  width: 63px;
+  height: 39px;
+  text-align: left;
+  font: normal normal 550 16px/38px Open Sans;
+  letter-spacing: 0px;
+  color: #222222;
+  opacity: 1;
+  background: #F7FAFF 0% 0% no-repeat padding-box;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+#eye-img{
+   margin-right: 10px;
+   margin-top: 7px;
+   cursor: pointer; 
+   border-radius: 2px;
+}
+#contact-password{
+  width: 63px;
+  height: 39px;
+  text-align: left;
+  font: normal normal 600 16px/22px Open Sans;
+  letter-spacing: 0px;
+  color: #222222;
+  opacity: 1;
+  background: #F7FAFF 0% 0% no-repeat padding-box;
+}
 .form-group{
-      margin-top: 25px;
-  }
-.forgot{
-      top: 585px;
-      left: 1445px;
-      width: 135px;
-      height: 22px;
-      text-align: left;
-      font: normal normal 600 16px/22px Open Sans;
-      letter-spacing: 0px;
-      color: #0974DD;
-      opacity: 1;
-      text-decoration: none;
-  }
-.form-check-label{
-      top: 585px;
-      left: 1183px;
-      width: 111px;
-      height: 22px;
-      text-align: left;
-      font: normal normal normal 16px/22px Open Sans;
-      letter-spacing: 0px;
-     color: #000000BF;
-     opacity: 1;
-  }
+  margin-top: 25px;
+}
+.form-control{
+  border-left: none;
+}
+.pswd{
+  border-right: none;
+}
 #remember{
-      top: 587px;
-      left: 1160px;
-      width: 18px;
-      height: 18px;
-  }
+  top: 587px;
+  left: 1160px;
+  width: 18px;
+  height: 18px;
+}
+.form-check-label{
+  top: 585px;
+  left: 1183px;
+  width: 111px;
+  height: 22px;
+  text-align: left;
+  font: normal normal normal 16px/22px Open Sans;
+  letter-spacing: 0px;
+  color: #000000BF;
+  opacity: 1;
+}
+.forgot{
+  top: 585px;
+  left: 1445px;
+  width: 135px;
+  height: 22px;
+  text-align: left;
+  font: normal normal 600 16px/22px Open Sans;
+  letter-spacing: 0px;
+  color: #0974DD;
+  opacity: 1;
+  text-decoration: none;
+}
+.login-btn{
+  background: transparent linear-gradient(270deg, #386CB5 0%, #669FED 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 5px #386CB566;
+  border-radius: 6px;
+  opacity: 1;
+  color: white;
+  height: 40px;
+  text-align: center;
+  /*padding: 12px; */
+  font-size: 12px;
+  border: none;
+  width: 100%;
+  margin-top: 30px;
+}
+.logintxt{
+  font: normal normal 600 16px/22px Open Sans;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+}
+#Dacct{
+  /* width: 179px; */
+  text-align: left;
+  font: normal normal 550 16px/37px Open Sans;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  height: 37px;
+}
+.register-btn{
+  height: 42px;
+  background: #FEC006 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 10px #0000001A;
+  border-radius: 6px;
+  opacity: 1;
+  border: none;
+}
+.regtext{
+  text-align: left;
+  font: normal normal  15 13px/9px Open Sans;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+  padding: 2px;
+}
 .copyright{
-width: 382px;
-height: 79px;
-text-align: center;
-font-size: small;
-letter-spacing: 0px;
-color: #000000;
-opacity: 1;
-padding: 10px;
+  width: 343px;
+  height: 79px;
+  text-align: center;
+  font-size: small;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  padding: 10px;
+  margin-left: 115px;
+}
+#email-error{
+  color: red;
+  font-size: 14px;
+}
+#password-error{
+  color: red;
+  font-size: 14px;
+}
+#submit-error{
+  color: red;
+  font-size: 14px;
+}
+@media (max-width:375px) {
+    #logo{
+      width: 233px;
+      height: 65px;
+      margin-top: 50px;
+      margin-left: 50px;
+}   
+  .card-group{
+  margin-top: 35px;
+  margin-left: 0px;
+}
+  .copyright{
+    margin-left: 0px;
+  }
+}
+@media (min-width:376px) and (max-width:450px){
+  #logo{
+    width: 279px;
+    height: 78px;
+    margin-top: 50px;
+    margin-left: 40px
+}
+.card-group{
+  margin-left: 2px;
+  margin-top: 50px;
+  width: 350px;
+}
+.copyright{
+    margin-left: 0px;
+}
+
 }
