@@ -48,6 +48,10 @@ background-size: cover;
   color: #000000;
   opacity: 0.5;
 }
+#Emailjs{
+  margin-bottom: 20px;
+}
+
 .input-group{
  /* background: #F7FAFF 0% 0% no-repeat padding-box; */
   border-radius: 6px;
@@ -182,6 +186,7 @@ background-size: cover;
 .register{
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
 }
 #Dacct{
   /* width: 179px; */

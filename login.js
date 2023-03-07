@@ -1,7 +1,15 @@
 var Emailerr = document.getElementById('email-error');
 var Passerr = document.getElementById('password-error');
 var Suberr = document.getElementById('submit-error');
-var loginBtn = document.getElementById('loginbtn');
+//var loginBtn = document.getElementById('loginbtn');
+
+const togglePassword = document.querySelector('#eye-img');
+const password = document.querySelector('#contact-password');
+togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+});
 
 
 function validateEmail(){
@@ -9,18 +17,20 @@ function validateEmail(){
     var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
     if(email.length == ""){
         Emailerr.innerHTML='*Please enter your email address';
-        card.style.maxHeight="482px";
-        card.style.Height="fit-content";
+        document.getElementById("contact-email").style.borderBottom = "2px solid red";
+        document.getElementById("regt").style.marginTop = "0px";
         return false;
     }
     else if(!regEmail.test(email)){
         Emailerr.innerHTML='*Please enter valid email address';
-        card.style.Height="482px";
+        document.getElementById("contact-email").style.borderBottom = "2px solid red";
+        document.getElementById("regt").style.marginTop = "0px";
         return false;
     }
     else {
         Emailerr.style.visibility="hidden";
-        card.style.Height="450px";
+        document.getElementById("contact-email").style.borderBottom = "1px solid #ced4da";
+        document.getElementById("Emailjs").style.marginBottom = "1px";
     }
 return true;
 }
@@ -29,14 +39,20 @@ function validatePswd(){
     console.log(password);
     if(password.length == 0){
         Passerr.innerHTML=' *Please enter your password';
+        document.getElementById('contact-password').style.borderBottom = "2px solid red";
+        document.getElementById("regt").style.marginTop = "3px";
         return false;
     }
     else if(password!="aleyka") {
         Passerr.innerHTML='*Password is not valid, enter correct password!';
+        document.getElementById('contact-password').style.borderBottom = "2px solid red";
+        document.getElementById("regt").style.marginTop = "3px";
         return false;
     }
     else if(password == "aleyka") {
         Passerr.style.visibility="hidden";
+        document.getElementById('contact-password').style.borderBottom = "1px solid #ced4da";
+        document.getElementById('RemmJs').style.marginTop = "4px";
     }
 
 return true;
