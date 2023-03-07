@@ -49,7 +49,7 @@ background-size: cover;
   opacity: 0.5;
 }
 .input-group{
-  background: #F7FAFF 0% 0% no-repeat padding-box;
+ /* background: #F7FAFF 0% 0% no-repeat padding-box; */
   border-radius: 6px;
   opacity: 1;
 }
@@ -57,7 +57,7 @@ background-size: cover;
     display: inline-block;
     /*width: 55px; */
     height: 39px;
-    /*background: #F7FAFF 0% 0% no-repeat padding-box;*/
+    background: #F7FAFF 0% 0% no-repeat padding-box;
     border: 1px solid #DDDDDD;
     border-radius: 6px;
     opacity: 1;
@@ -109,6 +109,9 @@ background-size: cover;
   color: #222222;
   opacity: 1;
   background: #F7FAFF 0% 0% no-repeat padding-box;
+}
+#contact-email:focus,#contact-password:focus{
+  outline: none;
 }
 .form-group{
   margin-top: 25px;
@@ -162,12 +165,23 @@ background-size: cover;
   width: 100%;
   margin-top: 30px;
 }
+/*.login-btn.disable{
+  background: #eaeaea;
+  color: #555;
+}
+.logintxt.disable{
+  color: black;
+}*/
 .logintxt{
   font: normal normal 600 16px/22px Open Sans;
   letter-spacing: 0px;
   color: #FFFFFF;
   text-transform: uppercase;
   opacity: 1;
+}
+.register{
+  display: flex;
+  justify-content: space-between;
 }
 #Dacct{
   /* width: 179px; */
@@ -228,6 +242,7 @@ background-size: cover;
   .card-group{
   margin-top: 35px;
   margin-left: 0px;
+  margin-right: 0px;
 }
   .copyright{
     margin-left: 0px;
@@ -235,10 +250,10 @@ background-size: cover;
 }
 @media (min-width:376px) and (max-width:450px){
   #logo{
-    width: 279px;
-    height: 78px;
+   
+    height: 73px;
     margin-top: 50px;
-    margin-left: 40px
+    margin-left: 0px
 }
 .card-group{
   margin-left: 2px;
@@ -249,4 +264,18 @@ background-size: cover;
     margin-left: 0px;
 }
 
+}
+@media (min-width:768px) and (max-width: 1080px){
+  .container{
+    display: flex;
+  }
+  #logo{
+     margin-left: -17px;
+  }
+  .card-group{
+      margin-left: 0px;
+  }
+  .copyright{
+       margin-left: 0px;
+  }
 }
