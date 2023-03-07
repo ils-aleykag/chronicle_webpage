@@ -53,32 +53,3 @@ function validateForm(){
     }
     return true;
 }
-
-/*function getVisibility(){
-    var getPassword = document.getElementById("contact-password");
-    console.log(getPassword.value);
-    if (getPassword.type === "password") {  
-        getPassword.type = "text";  
-    } else {  
-        getPassword.type = "password";  
-    }  
-}
-function registerNow(){
-    window.location = "register.html";
-}
-
-function errorMessage() {
-    var error = document.getElementById("password-error");
-    if (isNaN(document.getElementById("contact-password").value))
-    {
-       error.textContent = "*Please enter password";
-        error.style.color = "red";
-    }
-    else if(document.getElementById("contact-password")=="ilead"){
-        error.textContent = "*Please enter a valid password";
-        error.style.color = "red";
-    }
-    else {
-        error.textContent = "";
-    }
-}*/
