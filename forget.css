@@ -1,0 +1,106 @@
+body{
+    background-image: url('img/Bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+#logo{
+    width:350px;
+    height: 90px;
+    margin-top: 250px;
+    margin-left: 95px;
+    }
+.card{
+    width: 26rem;
+    border: none;
+    border-radius: 1.25rem;
+    margin-top: 180px;
+    margin-left: 40px;
+    margin-right: 45px;
+}
+.card-body{
+width: 415px;
+height: 263px;
+box-shadow: 0px 1px 6px #00000029;
+border-radius: 20px;
+opacity: 1;
+padding: 30px;
+}
+.card-title{
+width: 244px;
+height: 33px;
+text-align: left;
+font: normal normal bold 24px/33px Open Sans;
+letter-spacing: 0px;
+color: #000000;
+text-transform: uppercase;
+opacity: 1;
+}
+.card-text{
+width: 376px;
+height: 48px;
+text-align: left;
+font: normal normal normal 18px/24px Open Sans;
+letter-spacing: 0px;
+color: #000000;
+opacity: 0.5;
+}
+#Emailjs{
+    margin-bottom: 20px;
+  }
+  
+.input-group{
+    border-radius: 6px;
+    opacity: 1;
+}
+.input-group-img {
+      display: inline-block;
+      /*width: 55px; */
+      height: 39px;
+      background: #F7FAFF 0% 0% no-repeat padding-box;
+      border: 1px solid #DDDDDD;
+      border-radius: 6px;
+      opacity: 1;
+}
+#input_img_1{
+    width: 20px;
+    height: 16px;
+    background: transparent url('img/email.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    margin-left: 13px;
+    margin-top: 6px;
+}
+#contact-email{
+    width: 63px;
+    height: 39px;
+    text-align: left;
+    font: normal normal 550 16px/38px Open Sans;
+    letter-spacing: 0px;
+    color: #222222;
+    opacity: 1;
+    background: #F7FAFF 0% 0% no-repeat padding-box;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-left: none;
+}
+.btn{
+width: 358px;
+height: 42px;
+background: transparent linear-gradient(270deg, #386CB5 0%, #669FED 100%) 0% 0% no-repeat padding-box;
+box-shadow: 0px 0px 5px #386CB566;
+border-radius: 6px;
+opacity: 0.5;
+}
+#retrive{
+width: 162px;
+height: 22px;
+text-align: left;
+font: normal normal 600 16px/22px Open Sans;
+letter-spacing: 0px;
+color: #FFFFFF;
+text-transform: uppercase;
+opacity: 1;
+}
+#email-error{
+    color: red;
+    font-size: 14px;
+}
