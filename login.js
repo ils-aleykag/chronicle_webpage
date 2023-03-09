@@ -3,6 +3,8 @@ var Passerr = document.getElementById('password-error');
 var Suberr = document.getElementById('submit-error');
 //var loginBtn = document.getElementById('loginbtn');
 
+
+
 const togglePassword = document.querySelector('#eye-img');
 const password = document.querySelector('#contact-password');
 togglePassword.addEventListener('click', function (e) {
@@ -14,6 +16,7 @@ togglePassword.addEventListener('click', function (e) {
 
 function validateEmail(){
     var email = document.getElementById('contact-email').value;
+    sessionStorage.setItem('EmailId', email);
     var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
     if(email.length == ""){
         Emailerr.innerHTML='*Please enter your email address';
@@ -36,6 +39,7 @@ return true;
 }
 function validatePswd(){
     var password = document.getElementById('contact-password').value;
+    sessionStorage.setItem('Password', password);
     console.log(password);
     if(password.length == 0){
         Passerr.innerHTML=' *Please enter your password';
@@ -69,4 +73,7 @@ function validateForm(){
     }
     return true;
 }
+
+
+
 
