@@ -10,7 +10,7 @@ body{
     margin-left: 95px;
     }
 .card{
-    width: 26rem;
+    width: 415px;
     border: none;
     border-radius: 1.25rem;
     margin-top: 180px;
@@ -19,7 +19,7 @@ body{
 }
 .card-body{
 width: 415px;
-height: 263px;
+height: 270px;
 box-shadow: 0px 1px 6px #00000029;
 border-radius: 20px;
 opacity: 1;
@@ -104,3 +104,71 @@ opacity: 1;
     color: red;
     font-size: 14px;
 }
+@media (max-width: 375px) {
+    #logo{
+    width: 250px;
+    height: 83px;
+    margin-top: 37px;
+    margin-left: 54px;
+    }
+    .card{
+        width: 339px;
+        margin-top: 66px;
+        margin-left: 5px;
+        margin-right: 0px;
+    }
+    .card-body{
+        width: 339px;
+       height: 270px;
+    }
+    .card-text{
+        width: 318px;
+        height: 48px;
+        font: 16px / 24px "Open Sans";
+    }
+    .btn{
+        width: 280px;
+    }
+}
+@media (min-width:376px) and (max-width:450px){
+    #logo{
+    width: 263px;
+    height: 82px;
+    margin-top: 36px;
+    margin-left: 54px;
+    }
+    .card{
+        width: 339px;
+        margin-top: 66px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .card-body{
+       width: 339px;
+       height: 270px;
+    }
+    .card-text{
+    width: 318px;
+    height: 48px;
+    font: 16px / 24px "Open Sans";
+}
+.btn{
+    width: 280px;
+}
+}
+@media (min-width: 451px) and (max-width: 895px){
+    #logo{
+        margin-left: -50px;
+    }
+    .card{
+        width: 407px;
+        margin-left: 4px;
+    }
+    .card-body{
+        width: 407px;
+    }
+    .btn{
+        width: 349px;
+    }
+}
+
