@@ -1,1 +1,75 @@
-<h1>Register page</h1>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="register.css">
+        <title>Register Page</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 side-logo">
+                    <img src="img/Logo.png" id="logo">
+                </div>
+                <div class="col-md-6 right">
+                    <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">REGISTRATION</h5>
+                          <div class="row">
+                             <div class="col">
+                                 <h6 class="step1 d-flex justify-content-center">STEP 01</h6>
+                                 <hr>
+                             </div>
+                             <div class="col">
+                                <h6 class="step2 d-flex justify-content-center">STEP 02</h6>
+                                <hr>
+                            </div>
+                          </div>
+                          <div class="row">
+                               <div class="col form-floating">
+                                 <input type="text" class="form-control" placeholder="First name" aria-label="First name" id="floatingfName">
+                                 <label for="floatingfName">First Name</label>
+                               </div>
+                               <div class="col form-floating">
+                                 <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="floatinglName">
+                                 <label for="floatinglName">Last Name</label>
+                               </div>
+                           </div>
+                            <div class="input-group mt-3" id="Emailjs">
+                              <span class="input-group-img">
+                                <img src="" id="input_img_1">
+                              </span>
+                              <input type="email" class="form-control" placeholder="Email ID"  id="contact-email"  onkeyup= "validateEmail()" name="email" autocomplete="off">
+                              <p id="email-error"></p>
+                            </div>
+                            <div class="input-group mt-3" id="Mnumber">
+                                <span class="input-group-num">
+                                  
+                                </span>
+                                <input type="text" class="form-control" placeholder="Mobile Number"  id="contact-number"  name="number" autocomplete="off">
+                                <p id="number-error"></p>
+                            </div>
+                            <h6 class="sub-heading mt-3">Create Password</h6>
+                            <p class="title">Password must contain one special character, one capital letter and be at least 6 characters long.</p>
+                            <div class="password">
+                                <input type="text" class="form-control" placeholder="Enter Password" id="contact-password">
+                            </div>
+                            <div class="confirmPass mt-3">
+                                <input type="text" class="form-control" placeholder="Confirm Password" id="confirm-password">
+                            </div>
+                            <div class="d-grid d-md-flex justify-content-md-end mt-3">
+                                <button class="btn btn-primary me-md-2" type="button">Next Step</button>
+                            </div>
+                            <div class="login mt-3" id="lgn">
+                                <span class=" float-start span-text" id="Dacct">Do have an account?</span>
+                                <button class="float-end login-btn" type="button"><span class="lgntext">LOGIN</span></button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

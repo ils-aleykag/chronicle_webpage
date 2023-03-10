@@ -1,0 +1,16 @@
+body{
+    background-image: url('img/Bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+#logo{
+    width:350px;
+    height: 90px;
+    margin-top: 250px;
+    margin-left: 95px;
+    }
+.card{
+   width: 75%;
+   margin-top: 40px;
+   padding: 20px;
+}
