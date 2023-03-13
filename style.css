@@ -14,7 +14,6 @@ background-size: cover;
   justify-content: space-evenly;
   left: 1000px;
   width: 350px;
-  height: 450px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 1px 6px #00000029;
   border-radius: 10px;
@@ -28,7 +27,6 @@ background-size: cover;
 }
 .card-body{
   width: 325px;
-  height: 432px;
 }
 .login{
   height: 33px;
@@ -114,9 +112,7 @@ background-size: cover;
   opacity: 1;
   background: #F7FAFF 0% 0% no-repeat padding-box;
 }
-#contact-email:focus,#contact-password:focus{
-  outline: none;
-}
+
 .form-group{
   margin-top: 25px;
 }
@@ -237,13 +233,21 @@ background-size: cover;
   color: red;
   font-size: 14px;
 }
+.form-control:focus {
+  box-shadow: none;
+}
+
+input:focus{
+  outline: none !important;
+  border-top: 1px solid #DDDDDD !important;
+}
 @media (max-width:375px) {
     #logo{
       width: 233px;
       height: 65px;
       margin-top: 50px;
       margin-left: 50px;
-}   
+}    
   .card-group{
   margin-top: 35px;
   margin-left: 0px;

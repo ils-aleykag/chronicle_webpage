@@ -19,12 +19,14 @@ function validateEmail(){
     sessionStorage.setItem('EmailId', email);
     var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
     if(email.length == ""){
+        Emailerr.style.visibility="visible";
         Emailerr.innerHTML='*Please enter your email address';
         document.getElementById("contact-email").style.borderBottom = "2px solid red";
         document.getElementById("regt").style.marginTop = "0px";
         return false;
     }
     else if(!regEmail.test(email)){
+        Emailerr.style.visibility="visible";
         Emailerr.innerHTML='*Please enter valid email address';
         document.getElementById("contact-email").style.borderBottom = "2px solid red";
         document.getElementById("regt").style.marginTop = "0px";
@@ -43,18 +45,20 @@ function validatePswd(){
     console.log(password);
     if(password.length == 0){
         Passerr.innerHTML=' *Please enter your password';
+        Passerr.style.visibility="visible";
         document.getElementById('contact-password').style.borderBottom = "2px solid red";
         document.getElementById("regt").style.marginTop = "3px";
         return false;
     }
     else if(password!="aleyka") {
         Passerr.innerHTML='*Password is not valid, enter correct password!';
+        Passerr.style.visibility="visible";
         document.getElementById('contact-password').style.borderBottom = "2px solid red";
         document.getElementById("regt").style.marginTop = "3px";
         return false;
     }
     else if(password == "aleyka") {
-        Passerr.style.visibility="hidden";
+        Passerr.innerHTML=' *Please enter your password';
         document.getElementById('contact-password').style.borderBottom = "1px solid #ced4da";
         document.getElementById('RemmJs').style.marginTop = "4px";
     }
@@ -63,7 +67,7 @@ return true;
 }
 function validateForm(){
     if(!validateEmail() || !validatePswd()){
-         loginBtn.classList.add("disable");
+         //loginBtn.classList.add("disable");
          card.style.Height="500px";
         //Suberr.innerHTML='*Please enter details in all feilds to submit';
         return false;

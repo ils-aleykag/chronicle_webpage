@@ -28,22 +28,27 @@
                             </div>
                           </div>
                           <div class="row">
-                               <div class="col form-floating">
+                               <div class="col-md-6 form-floating">
                                  <input type="text" class="form-control" placeholder="First name" aria-label="First name" id="floatingfName">
                                  <label for="floatingfName">First Name</label>
                                </div>
-                               <div class="col form-floating">
+                               <div class="col-md-6 form-floating">
                                  <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="floatinglName">
                                  <label for="floatinglName">Last Name</label>
                                </div>
                            </div>
-                            <div class="input-group mt-3" id="Emailjs">
-                              <span class="input-group-img">
-                                <img src="" id="input_img_1">
-                              </span>
-                              <input type="email" class="form-control" placeholder="Email ID"  id="contact-email"  onkeyup= "validateEmail()" name="email" autocomplete="off">
-                              <p id="email-error"></p>
-                            </div>
+                           <div class="input-group mt-2">
+                               <span class="input-group-img">
+                                 <img src="" id="input_img_1">
+                               </span>
+                               <input type="text" class="form-control pswd" placeholder="Password" id="contact-password" onkeyup="validatePswd()" name="password">
+                               <div class="input-group-append">
+                                  <span class="input-group-img" id="eyes-border">
+                                    <img src="img/eye (1).png" id="eye-img">
+                                  </span>
+                               </div>
+                               <span id="password-error"></span>
+                           </div>
                             <div class="input-group mt-3" id="Mnumber">
                                 <span class="input-group-num">
                                   

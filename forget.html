@@ -23,9 +23,9 @@
                                 <img src="" id="input_img_1">
                               </span>
                               <input type="email" class="form-control" placeholder="Email ID"  id="contact-email"  onkeyup= "validateEmail()" name="email" autocomplete="off">
-                              <p id="email-error"></p>
                             </div>
-                            <div class="d-grid col-12 mx-auto mt-3">
+                            <span id="email-error"></span>
+                            <div class="d-grid col-12 mx-auto mt-3" id="button">
                                 <button class="btn" type="button" onclick="validateEmail()"><span id="retrive">RETRIEVE PASSWORD</span></button>
                             </div>
                         </div>
@@ -43,6 +43,7 @@
             var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
             if(!regEmail.test(email)){
                Emailerr.innerHTML='*Please enter valid email address';
+               Emailerr.style.display = "block";
                document.getElementById("contact-email").style.borderBottom = "2px solid red";
                // document.getElementById("regt").style.marginTop = "0px";
                return false;

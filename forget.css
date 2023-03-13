@@ -103,6 +103,11 @@ opacity: 1;
 #email-error{
     color: red;
     font-size: 14px;
+    position: relative;
+    margin-top: -17px;
+}
+.form-control:focus {
+     box-shadow: none;
 }
 @media (max-width: 375px) {
     #logo{

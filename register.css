@@ -11,6 +11,110 @@ body{
     }
 .card{
    width: 75%;
-   margin-top: 40px;
-   padding: 20px;
+   margin-top: 30px;
+   padding: 10px;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   box-shadow: 0px 1px 6px #00000029;
+   border-radius: 20px;
+   opacity: 1;
+}
+.card-title{
+    /*width: 173px;*/
+   height: 33px;
+   text-align: left;
+   font: normal normal bold 24px/33px Open Sans;
+   letter-spacing: 0px;
+   color: #000000;
+   text-transform: uppercase;
+   opacity: 1;
+}
+.step1{
+    top: 13px;
+    left: 35px;
+    position: relative;
+    width: 86px;
+    height: 24px;
+    text-align: left;
+    font: normal normal 587 16px/22px Open Sans;
+    letter-spacing: 0px;
+    color: #386CB5;
+    text-transform: uppercase;
+    opacity: 1;
+}
+.step2{
+    top: 13px;
+    left: 35px;
+    position: relative;
+    width: 86px;
+    height: 24px;
+    text-align: left;
+    font: normal normal 587 16px/22px Open Sans;
+    letter-spacing: 0px;
+    color: #AFC4E1;
+    text-transform: uppercase;
+    opacity: 1;
+}
+.form-floating{
+    border: none;
+}
+#floatingfName{
+    width: 175px;
+    height: 50px;
+    background: #F7FAFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    border-radius: 6px;
+    opacity: 1;
+}
+#floatinglName{
+    width: 175px;
+    height: 50px;
+    background: #F7FAFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    border-radius: 6px;
+    opacity: 1;
+}
+.input-email{
+    border: none;
+}
+.input-group{
+    /* background: #F7FAFF 0% 0% no-repeat padding-box; */
+     border-radius: 6px;
+     opacity: 1;
+}
+.input-group-img {
+       display: inline-block;
+       /*width: 55px; */
+       height: 39px;
+       background: #F7FAFF 0% 0% no-repeat padding-box;
+       border: 1px solid #DDDDDD;
+       border-radius: 6px;
+       opacity: 1;
+}
+#input_img_2{
+    width: 20px;
+    height: 16px;
+    background: transparent url('img/email.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    margin-left: 13px;
+    margin-top: 6px;
+}
+#eye-img{
+    margin-right: 10px;
+    margin-top: 7px;
+    cursor: pointer; 
+    border-radius: 2px;
+ }
+#contact-email{
+  height: 41px;
+  background: #F7FAFF 0% 0% no-repeat padding-box;
+  border: 1px solid #DDDDDD;
+  border-radius: 6px;
+  opacity: 1;
+  width: 63px;
+  text-align: left;
+  font: normal normal 550 16px/38px Open Sans;
+  letter-spacing: 0px;
+  color: #222222;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
