@@ -101,6 +101,8 @@ background-size: cover;
    margin-top: 7px;
    cursor: pointer; 
    border-radius: 2px;
+   width: 21px;
+   height: 17px;
 }
 #contact-password{
   width: 63px;
@@ -163,7 +165,7 @@ background-size: cover;
   font-size: 12px;
   border: none;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 17px;
 }
 /*.login-btn.disable{
   background: #eaeaea;
@@ -240,6 +242,7 @@ background-size: cover;
 input:focus{
   outline: none !important;
   border-top: 1px solid #DDDDDD !important;
+  border-bottom: 1px solid #DDDDDD !important;
 }
 @media (max-width:375px) {
     #logo{

@@ -11,7 +11,18 @@ togglePassword.addEventListener('click', function (e) {
     // toggle the type attribute
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
     password.setAttribute('type', type);
+    
 });
+function changeImage() {
+    var image = document.getElementById('eye-img');
+    if (image.src.match("eye-closed")) {
+        image.src = "img/eye.png";
+    }
+    else {
+        image.src = "img/eye-closed.jpg";
+    }
+}
+
 
 
 function validateEmail(){
@@ -58,9 +69,9 @@ function validatePswd(){
         return false;
     }
     else if(password == "aleyka") {
-        Passerr.innerHTML=' *Please enter your password';
         document.getElementById('contact-password').style.borderBottom = "1px solid #ced4da";
         document.getElementById('RemmJs').style.marginTop = "4px";
+        Passerr.style.visibility="hidden";
     }
 
 return true;
