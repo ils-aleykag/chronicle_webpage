@@ -19,7 +19,6 @@ body{
 }
 .card-body{
 width: 415px;
-height: 270px;
 box-shadow: 0px 1px 6px #00000029;
 border-radius: 20px;
 opacity: 1;
@@ -27,7 +26,6 @@ padding: 30px;
 }
 .card-title{
 width: 244px;
-height: 33px;
 text-align: left;
 font: normal normal bold 24px/33px Open Sans;
 letter-spacing: 0px;
@@ -37,17 +35,12 @@ opacity: 1;
 }
 .card-text{
 width: 376px;
-height: 48px;
 text-align: left;
 font: normal normal normal 18px/24px Open Sans;
 letter-spacing: 0px;
 color: #000000;
 opacity: 0.5;
 }
-#Emailjs{
-    margin-bottom: 20px;
-  }
-  
 .input-group{
     border-radius: 6px;
     opacity: 1;
@@ -82,9 +75,13 @@ opacity: 0.5;
     border-bottom-right-radius: 6px;
     border-left: none;
 }
+#Emailjs{
+    margin-top: 24px;
+    margin-bottom: 30px;
+}
 .btn{
 width: 358px;
-height: 42px;
+
 background: transparent linear-gradient(270deg, #386CB5 0%, #669FED 100%) 0% 0% no-repeat padding-box;
 box-shadow: 0px 0px 5px #386CB566;
 border-radius: 6px;
@@ -92,7 +89,7 @@ opacity: 0.5;
 }
 #retrive{
 width: 162px;
-height: 22px;
+
 text-align: left;
 font: normal normal 600 16px/22px Open Sans;
 letter-spacing: 0px;
@@ -103,16 +100,19 @@ opacity: 1;
 #email-error{
     color: red;
     font-size: 14px;
-    position: relative;
-    margin-top: -17px;
 }
 .form-control:focus {
      box-shadow: none;
 }
+input:focus{
+    outline: none !important;
+    border-top: 1px solid #DDDDDD !important;
+    border-bottom: 1px solid #DDDDDD !important;
+    border-right: 1px solid #DDDDDD !important;
+  }
 @media (max-width: 375px) {
     #logo{
     width: 250px;
-    height: 83px;
     margin-top: 37px;
     margin-left: 54px;
     }
@@ -124,11 +124,9 @@ opacity: 1;
     }
     .card-body{
         width: 339px;
-       height: 270px;
     }
     .card-text{
         width: 318px;
-        height: 48px;
         font: 16px / 24px "Open Sans";
     }
     .btn{
@@ -138,7 +136,6 @@ opacity: 1;
 @media (min-width:376px) and (max-width:450px){
     #logo{
     width: 263px;
-    height: 82px;
     margin-top: 36px;
     margin-left: 54px;
     }
@@ -150,11 +147,9 @@ opacity: 1;
     }
     .card-body{
        width: 339px;
-       height: 270px;
     }
     .card-text{
     width: 318px;
-    height: 48px;
     font: 16px / 24px "Open Sans";
 }
 .btn{

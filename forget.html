@@ -18,15 +18,17 @@
                         <div class="card-body">
                           <h5 class="card-title">FORGOT PASSWORD</h5>
                           <p class="card-text">Enter your registered email address. We will email you a new password for your account</p>
-                            <div class="input-group mt-4" id="Emailjs">
+                            <div class="input-group" id="Emailjs">
                               <span class="input-group-img">
                                 <img src="" id="input_img_1">
                               </span>
                               <input type="email" class="form-control" placeholder="Email ID"  id="contact-email"  onkeyup= "validateEmail()" name="email" autocomplete="off">
+                              <div class="col-12">
+                                <span id="email-error"></span>
+                              </div>
                             </div>
-                            <span id="email-error"></span>
-                            <div class="d-grid col-12 mx-auto mt-3" id="button">
-                                <button class="btn" type="button" onclick="validateEmail()"><span id="retrive">RETRIEVE PASSWORD</span></button>
+                            <div class="d-grid col-12 mx-auto" id="button">
+                                <button class="btn" type="button" onclick="return validateForm()"><span id="retrive">RETRIEVE PASSWORD</span></button>
                             </div>
                         </div>
                     </div>
@@ -42,18 +44,24 @@
             sessionStorage.setItem('EmailId', email);
             var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
             if(!regEmail.test(email)){
+               Emailerr.style.visibility="visible";
+               document.getElementById("Emailjs").style.marginBottom = "10px";
                Emailerr.innerHTML='*Please enter valid email address';
-               Emailerr.style.display = "block";
                document.getElementById("contact-email").style.borderBottom = "2px solid red";
                // document.getElementById("regt").style.marginTop = "0px";
                return false;
             }
             else {
                Emailerr.style.visibility="hidden";
+               document.getElementById("Emailjs").style.marginBottom = "6px";
                document.getElementById("contact-email").style.borderBottom = "1px solid #ced4da";
-               document.getElementById("Emailjs").style.marginBottom = "1px";
             }
          return true;
         }
+        function validateForm(){
+        if(validateEmail()){
+            window.alert("Mail send to reset password");
+        }
+}
     </script>
 </html>
