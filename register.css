@@ -2,7 +2,8 @@ body{
     background-image: url('img/Bg.png');
     background-repeat: no-repeat;
     background-size: cover;
-    }
+    font-style: Open Sans;
+}
 #logo{
     width:350px;
     height: 90px;
@@ -12,7 +13,7 @@ body{
 .card{
    width: 75%;
    margin-top: 30px;
-   padding: 10px;
+   padding: 12px;
    background: #FFFFFF 0% 0% no-repeat padding-box;
    box-shadow: 0px 1px 6px #00000029;
    border-radius: 20px;
@@ -22,7 +23,7 @@ body{
     /*width: 173px;*/
    height: 33px;
    text-align: left;
-   font: normal normal bold 24px/33px Open Sans;
+  
    letter-spacing: 0px;
    color: #000000;
    text-transform: uppercase;
@@ -35,7 +36,7 @@ body{
     width: 86px;
     height: 24px;
     text-align: left;
-    font: normal normal 587 16px/22px Open Sans;
+   /* font: normal normal 587 16px/22px Open Sans; */
     letter-spacing: 0px;
     color: #386CB5;
     text-transform: uppercase;
@@ -48,29 +49,54 @@ body{
     width: 86px;
     height: 24px;
     text-align: left;
-    font: normal normal 587 16px/22px Open Sans;
+   /* font: normal normal 587 16px/22px Open Sans; */
     letter-spacing: 0px;
     color: #AFC4E1;
     text-transform: uppercase;
     opacity: 1;
 }
+.hrStep1{
+    background: #386CB5 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    opacity: 1;
+}
+.hrstep2{
+    background: #AFC4E1 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    opacity: 1;
+}
+.hrStep1:not([size]) {
+    height: 2px;
+}
+.hrstep2:not([size]) {
+    height: 2px;
+}
 .form-floating{
     border: none;
 }
-#floatingfName{
-    width: 175px;
-    height: 50px;
+.form-control:focus {
+  box-shadow: none;
+}
+
+input:focus{
+  outline: none !important;
+  border-top: 1px solid #DDDDDD !important;
+  border-bottom: 1px solid #DDDDDD !important;
+}
+#floatingfName,#floatinglName{
+   /* width: 167px;
+    height: 48px; */
     background: #F7FAFF 0% 0% no-repeat padding-box;
     border: 1px solid #DDDDDD;
     border-radius: 6px;
     opacity: 1;
 }
-#floatinglName{
-    width: 175px;
-    height: 50px;
-    background: #F7FAFF 0% 0% no-repeat padding-box;
-    border: 1px solid #DDDDDD;
-    border-radius: 6px;
+#Labelflname{
+    height: 22px;
+    text-align: left;
+    /*font: normal normal 600 16px/22px Open Sans;*/
+    letter-spacing: 0px;
+    color: #222222;
     opacity: 1;
 }
 .input-email{
@@ -83,38 +109,153 @@ body{
 }
 .input-group-img {
        display: inline-block;
-       /*width: 55px; */
-       height: 39px;
+       width: 36px; 
+       height: 41px;
        background: #F7FAFF 0% 0% no-repeat padding-box;
        border: 1px solid #DDDDDD;
        border-radius: 6px;
        opacity: 1;
+       border-right: none;
 }
-#input_img_2{
+#input_img_1{
     width: 20px;
     height: 16px;
-    background: transparent url('img/email.png') 0% 0% no-repeat padding-box;
     opacity: 1;
     margin-left: 13px;
     margin-top: 6px;
 }
-#eye-img{
-    margin-right: 10px;
-    margin-top: 7px;
-    cursor: pointer; 
-    border-radius: 2px;
- }
 #contact-email{
   height: 41px;
   background: #F7FAFF 0% 0% no-repeat padding-box;
   border: 1px solid #DDDDDD;
-  border-radius: 6px;
   opacity: 1;
   width: 63px;
   text-align: left;
-  font: normal normal 550 16px/38px Open Sans;
+  /*font: normal normal 550 16px/38px Open Sans;*/
   letter-spacing: 0px;
-  color: #222222;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
+  border-left: none;
+}
+#contact-number{
+    height: 41px;
+    width: 420px;
+    background: #F7FAFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    border-radius: 6px;
+    opacity: 1;
+    text-align: left;
+    /*font: normal normal 600 16px/22px Open Sans; */
+    letter-spacing: 0px;
+    color: #222222;
+    opacity: 1;
+}
+.subtitle{
+    text-align: left;
+    /*font: normal normal normal 16px/22px Open Sans;*/
+    letter-spacing: 0px;
+    color: #000000;
+    font-size: 15px;
+    opacity: 0.5;
+}
+.subheading{
+    text-align: left;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    font-size: 17px;
+}
+#contact-password{
+    background: #F7FAFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    border-radius: 6px;
+    opacity: 1;
+    text-align: left;
+    /*font: normal normal 600 16px/22px Open Sans;*/
+    letter-spacing: 0px;
+    color: #222222;
+    opacity: 1;
+}
+#confirm-password{
+    background: #F7FAFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    border-radius: 6px;
+    opacity: 1;
+    text-align: left;
+   /* font: normal normal 600 16px/22px Open Sans; */
+    letter-spacing: 0px;
+    color: #222222;
+    opacity: 1;
+}
+#nxtbtn{
+    background: transparent linear-gradient(270deg, #386CB5 0%, #669FED 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 5px #386cb566;
+    border-radius: 6px;
+    opacity: 1;
+}
+.btn{
+    color: #FFFFFF;
+    opacity: 1
+}
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    background-color: currentColor;
+    /* border: 0; */
+    opacity: 0.25;
+}
+#Dacct{
+   /* width: 159px;
+    height: 22px; */
+    text-align: left;
+    /*font: normal normal 600 16px/22px Open Sans;*/
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    margin-top: 32px;
+    font-weight: 650;
+}
+.login-btn{
+   width: 119px;
+   height: 39px;
+   background: #FEC006 0% 0% no-repeat padding-box;
+   box-shadow: 0px 1px 10px #0000001A;
+   border-radius: 6px;
+   opacity: 1;
+   border: none;
+   margin-top: 23px;
+}
+.lgntext{
+    width: 50px;
+    height: 22px;
+    text-align: left;
+    /*font: normal normal 600 16px/22px Open Sans;*/
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+}
+.copyright{
+    width: 343px;
+    height: 79px;
+    text-align: center;
+    font-size: small;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    padding: 10px;
+    margin-left: 60px;
+}
+.form-control:focus {
+    box-shadow: none;
+  }
+  
+input:focus{
+    outline: none !important;
+    border-top: 1px solid #DDDDDD !important;
+    border-bottom: 1px solid #DDDDDD !important;
+}
+#contact-email,#contact-number,#contact-password,#confirm-password,::placeholder{
+    color:#000000 !important;
+    font-weight: 600;
 }

@@ -20,58 +20,58 @@
                           <div class="row">
                              <div class="col">
                                  <h6 class="step1 d-flex justify-content-center">STEP 01</h6>
-                                 <hr>
+                                 <hr class="hrStep1">
                              </div>
                              <div class="col">
                                 <h6 class="step2 d-flex justify-content-center">STEP 02</h6>
-                                <hr>
+                                <hr class="hrstep2">
                             </div>
                           </div>
                           <div class="row">
                                <div class="col-md-6 form-floating">
                                  <input type="text" class="form-control" placeholder="First name" aria-label="First name" id="floatingfName">
-                                 <label for="floatingfName">First Name</label>
+                                 <label for="floatingfName" id="Labelflname">First Name</label>
                                </div>
                                <div class="col-md-6 form-floating">
                                  <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="floatinglName">
-                                 <label for="floatinglName">Last Name</label>
+                                 <label for="floatinglName" id="Labelflname">Last Name</label>
                                </div>
                            </div>
-                           <div class="input-group mt-2">
-                               <span class="input-group-img">
-                                 <img src="" id="input_img_1">
-                               </span>
-                               <input type="text" class="form-control pswd" placeholder="Password" id="contact-password" onkeyup="validatePswd()" name="password">
-                               <div class="input-group-append">
-                                  <span class="input-group-img" id="eyes-border">
-                                    <img src="img/eye (1).png" id="eye-img">
-                                  </span>
-                               </div>
-                               <span id="password-error"></span>
-                           </div>
-                            <div class="input-group mt-3" id="Mnumber">
+                           <div class="input-group mt-3" id="Emailjs">
+                              <span class="input-group-img">
+                                <img src="img/email.png" id="input_img_1">
+                              </span>
+                              <input type="email" class="form-control" placeholder="Email ID"  id="contact-email"  onkeyup= "validateEmail()" name="email" autocomplete="off">
+                              <span id="email-error"></span>
+                          </div>
+                           <div class="input-group mt-3" id="Mnumber">
                                 <span class="input-group-num">
                                   
                                 </span>
                                 <input type="text" class="form-control" placeholder="Mobile Number"  id="contact-number"  name="number" autocomplete="off">
                                 <p id="number-error"></p>
                             </div>
-                            <h6 class="sub-heading mt-3">Create Password</h6>
-                            <p class="title">Password must contain one special character, one capital letter and be at least 6 characters long.</p>
+                            <h6 class="subheading mt-3">Create Password</h6>
+                             <p class="subtitle">Password must contain one special character, one capital letter and be at least 6 characters long.</p>
                             <div class="password">
                                 <input type="text" class="form-control" placeholder="Enter Password" id="contact-password">
                             </div>
                             <div class="confirmPass mt-3">
                                 <input type="text" class="form-control" placeholder="Confirm Password" id="confirm-password">
                             </div>
-                            <div class="d-grid d-md-flex justify-content-md-end mt-3">
-                                <button class="btn btn-primary me-md-2" type="button">Next Step</button>
-                            </div>
-                            <div class="login mt-3" id="lgn">
+                            <div class="float-end mt-4" id="nxtbtn">
+                                <button class="btn me-md-2"  onclick="location.href = 'step2.html';" type="button">Next Step &#8594;</button>
+                            </div><br><br><br>
+                            <hr class="hrlgn">
+                            <div class="login-section">
                                 <span class=" float-start span-text" id="Dacct">Do have an account?</span>
-                                <button class="float-end login-btn" type="button"><span class="lgntext">LOGIN</span></button>
-                              </div>
+                                <button onclick="location.href = 'login.html';" class="float-end login-btn" type="button">
+                                    <span class="lgntext">LOGIN</span></button>
+                            </div>
                         </div>
+                    </div>
+                    <div class="copyright" id="copy">
+                        © 2022 All rights reserved | Built for Chronicle Cloud. <b>Powered with Synapse Xtreme Engine (SXE)</b>
                     </div>
                 </div>
             </div>
