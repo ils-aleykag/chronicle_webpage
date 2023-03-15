@@ -6,9 +6,6 @@ body{
 }
 #logo{
     width:350px;
-    height: 90px;
-    margin-top: 250px;
-    margin-left: 95px;
     }
 .card{
    width: 75%;
@@ -237,7 +234,6 @@ hr {
     opacity: 1;
 }
 .copyright{
-    width: 343px;
     height: 79px;
     text-align: center;
     font-size: small;
@@ -245,7 +241,6 @@ hr {
     color: #000000;
     opacity: 1;
     padding: 10px;
-    margin-left: 60px;
 }
 .form-control:focus {
     box-shadow: none;
@@ -342,4 +337,15 @@ input:focus{
 #zipcode::placeholder{
     color:#000000 !important;
     font-weight: 600;
+}
+@media (max-width:991px){
+      .card{
+         width: 100%;
+      }
+      #logo{
+        width:250px;
+      }
+      #floatingfName, #floatinglName {
+         margin-top: 10px;
+}
 }
