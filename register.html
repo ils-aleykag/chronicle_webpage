@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="register.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
         <title>Register Page</title>
     </head>
     <body>
@@ -17,17 +19,18 @@
                     <div class="card">
                         <div class="card-body">
                           <h5 class="card-title">REGISTRATION</h5>
-                          <div class="row">
-                             <div class="col">
-                                 <h6 class="step1 d-flex justify-content-center">STEP 01</h6>
-                                 <hr class="hrStep1">
-                             </div>
-                             <div class="col">
-                                <h6 class="step2 d-flex justify-content-center">STEP 02</h6>
-                                <hr class="hrstep2">
-                            </div>
-                          </div>
-                          <div class="row">
+                              <div class="row">
+                                <div class="col">
+                                   <h6 class="step1 d-flex justify-content-center">STEP 01</h6>
+                                   <hr class="hrStep1">
+                                </div>
+                                <div class="col">
+                                  <h6 class="step2 d-flex justify-content-center">STEP 02</h6>
+                                  <hr class="hrstep2">
+                                </div>
+                              </div>
+                            <div id="step1">
+                              <div class="row">
                                <div class="col-md-6 form-floating">
                                  <input type="text" class="form-control" placeholder="First name" aria-label="First name" id="floatingfName">
                                  <label for="floatingfName" id="Labelflname">First Name</label>
@@ -36,37 +39,65 @@
                                  <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="floatinglName">
                                  <label for="floatinglName" id="Labelflname">Last Name</label>
                                </div>
-                           </div>
-                           <div class="input-group mt-3" id="Emailjs">
+                             </div>
+                             <div class="input-group mt-3" id="Emailjs">
                               <span class="input-group-img">
                                 <img src="img/email.png" id="input_img_1">
                               </span>
                               <input type="email" class="form-control" placeholder="Email ID"  id="contact-email"  onkeyup= "validateEmail()" name="email" autocomplete="off">
                               <span id="email-error"></span>
-                          </div>
-                           <div class="input-group mt-3" id="Mnumber">
-                                <span class="input-group-num">
-                                  
-                                </span>
+                             </div>
+                             <div class="input-group mt-3" id="Mnumber">
                                 <input type="text" class="form-control" placeholder="Mobile Number"  id="contact-number"  name="number" autocomplete="off">
                                 <p id="number-error"></p>
-                            </div>
-                            <h6 class="subheading mt-3">Create Password</h6>
+                             </div>
+                             <h6 class="subheading mt-3">Create Password</h6>
                              <p class="subtitle">Password must contain one special character, one capital letter and be at least 6 characters long.</p>
-                            <div class="password">
+                             <div class="password">
                                 <input type="text" class="form-control" placeholder="Enter Password" id="contact-password">
-                            </div>
-                            <div class="confirmPass mt-3">
+                             </div>
+                             <div class="confirmPass mt-3">
                                 <input type="text" class="form-control" placeholder="Confirm Password" id="confirm-password">
-                            </div>
-                            <div class="float-end mt-4" id="nxtbtn">
-                                <button class="btn me-md-2"  onclick="location.href = 'step2.html';" type="button">Next Step &#8594;</button>
-                            </div><br><br><br>
-                            <hr class="hrlgn">
-                            <div class="login-section">
+                             </div>
+                             <div class="float-end mt-4" id="nxtbtn">
+                                <button class="btn me-md-2"  onclick=Next() type="button">Next Step &#8594;</button>
+                             </div><br><br><br>
+                             <hr class="hrlgn">
+                             <div class="login-section">
                                 <span class=" float-start span-text" id="Dacct">Do have an account?</span>
-                                <button onclick="location.href = 'login.html';" class="float-end login-btn" type="button">
-                                    <span class="lgntext">LOGIN</span></button>
+                                <button class="float-end login-btn" type="button" onclick="location.href = 'login.html';">
+                                 <span class="lgntext">LOGIN</span></button>
+                             </div>
+                            </div>
+                            <!--step2 section-->
+                            <div id="step2">
+                                <div class="school mt-4">
+                                    <input type="text" class="form-control" placeholder="School / University / Institute Name*" id="schoolName">
+                                </div>
+                                <div class="state mt-4">
+                                    <input type="text" class="form-control" placeholder="State*" id="stateName">
+                                </div>
+                                <div class="city mt-4">
+                                    <input type="text" class="form-control" placeholder="City*" id="cityName">
+                                </div>
+                                <div class="Country mt-4">
+                                    <input type="text" class="form-control" placeholder="Country*" id="countryName">
+                                </div>
+                                <div class="Zip mt-4">
+                                    <input type="text" class="form-control" placeholder="Zip Code*" id="zipcode">
+                                </div>
+                                <div class="form-check mt-4">
+                                    <input class="form-check-input shadow-none rounded-circle" type="checkbox" value="" id="flexCheckChecked">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        I agree to the <b class="terms">Terms of service</b> and <b class="terms">Privacy Policy</b>.
+                                    </label>
+                                </div>
+                                <div class="createaccount-section mt-5">
+                                    <span class=" float-start span-text" onclick=prev() id="stepback">&#8592;Step Back</span>
+                                    <button class="float-end create-btn" type="button">
+                                     <span class="createtext">Create Account</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -76,5 +107,7 @@
                 </div>
             </div>
         </div>
+        <script src="register.js"></script>
     </body>
+    
 </html>

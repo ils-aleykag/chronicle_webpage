@@ -3,8 +3,6 @@ var Passerr = document.getElementById('password-error');
 var Suberr = document.getElementById('submit-error');
 //var loginBtn = document.getElementById('loginbtn');
 
-
-
 const togglePassword = document.querySelector('#eye-img');
 const password = document.querySelector('#contact-password');
 togglePassword.addEventListener('click', function (e) {
@@ -13,6 +11,7 @@ togglePassword.addEventListener('click', function (e) {
     password.setAttribute('type', type);
     
 });
+
 function changeImage() {
     var image = document.getElementById('eye-img');
     if (image.src.match("eye-closed")) {
