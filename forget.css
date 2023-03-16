@@ -1,24 +1,17 @@
 body{
     background-image: url('img/Bg.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    font-style: Open Sans;
     }
 #logo{
     width:350px;
-    height: 90px;
-    margin-top: 250px;
-    margin-left: 95px;
     }
 .card{
-    width: 415px;
+    width: 75%;
     border: none;
     border-radius: 1.25rem;
-    margin-top: 180px;
-    margin-left: 40px;
-    margin-right: 45px;
 }
 .card-body{
-width: 415px;
 box-shadow: 0px 1px 6px #00000029;
 border-radius: 20px;
 opacity: 1;
@@ -27,16 +20,15 @@ padding: 30px;
 .card-title{
 width: 244px;
 text-align: left;
-font: normal normal bold 24px/33px Open Sans;
+/*font: normal normal bold 24px/33px Open Sans;*/
 letter-spacing: 0px;
 color: #000000;
 text-transform: uppercase;
 opacity: 1;
 }
 .card-text{
-width: 376px;
 text-align: left;
-font: normal normal normal 18px/24px Open Sans;
+/*font: normal normal normal 18px/24px Open Sans;*/
 letter-spacing: 0px;
 color: #000000;
 opacity: 0.5;
@@ -66,7 +58,7 @@ opacity: 0.5;
     width: 63px;
     height: 39px;
     text-align: left;
-    font: normal normal 550 16px/38px Open Sans;
+    /*font: normal normal 550 16px/38px Open Sans;*/
     letter-spacing: 0px;
     color: #222222;
     opacity: 1;
@@ -80,18 +72,16 @@ opacity: 0.5;
     margin-bottom: 30px;
 }
 .btn{
-width: 358px;
-
-background: transparent linear-gradient(270deg, #386CB5 0%, #669FED 100%) 0% 0% no-repeat padding-box;
-box-shadow: 0px 0px 5px #386CB566;
-border-radius: 6px;
-opacity: 0.5;
+    background: transparent linear-gradient(270deg, #386CB5 0%, #669FED 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 5px #386CB566;
+    border-radius: 6px;
+    opacity: 0.5;
 }
 #retrive{
 width: 162px;
 
 text-align: left;
-font: normal normal 600 16px/22px Open Sans;
+/*font: normal normal 600 16px/22px Open Sans;*/
 letter-spacing: 0px;
 color: #FFFFFF;
 text-transform: uppercase;
@@ -110,65 +100,16 @@ input:focus{
     border-bottom: 1px solid #DDDDDD !important;
     border-right: 1px solid #DDDDDD !important;
   }
-@media (max-width: 375px) {
-    #logo{
-    width: 250px;
-    margin-top: 37px;
-    margin-left: 54px;
-    }
+  #contact-email::placeholder{
+    color:#000000 !important;
+    font-weight: 600;
+}
+@media (max-width:991px){
     .card{
-        width: 339px;
-        margin-top: 66px;
-        margin-left: 5px;
-        margin-right: 0px;
+       width: 100%;
     }
-    .card-body{
-        width: 339px;
-    }
-    .card-text{
-        width: 318px;
-        font: 16px / 24px "Open Sans";
-    }
-    .btn{
-        width: 280px;
-    }
-}
-@media (min-width:376px) and (max-width:450px){
     #logo{
-    width: 263px;
-    margin-top: 36px;
-    margin-left: 54px;
-    }
-    .card{
-        width: 339px;
-        margin-top: 66px;
-        margin-left: 25px;
-        margin-right: 25px;
-    }
-    .card-body{
-       width: 339px;
-    }
-    .card-text{
-    width: 318px;
-    font: 16px / 24px "Open Sans";
-}
-.btn{
-    width: 280px;
-}
-}
-@media (min-width: 451px) and (max-width: 895px){
-    #logo{
-        margin-left: -50px;
-    }
-    .card{
-        width: 407px;
-        margin-left: 4px;
-    }
-    .card-body{
-        width: 407px;
-    }
-    .btn{
-        width: 349px;
+      width:250px;
     }
 }
 
