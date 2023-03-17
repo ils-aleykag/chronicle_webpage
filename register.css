@@ -20,7 +20,6 @@ body{
     /*width: 173px;*/
    height: 33px;
    text-align: left;
-  
    letter-spacing: 0px;
    color: #000000;
    text-transform: uppercase;
@@ -88,6 +87,11 @@ input:focus{
     border-radius: 6px;
     opacity: 1;
 }
+
+#Labelflname{
+    color:#000000 !important;
+    font-weight: 600;
+}
 #Labelflname{
     height: 22px;
     text-align: left;
@@ -95,7 +99,15 @@ input:focus{
     letter-spacing: 0px;
     color: #222222;
     opacity: 1;
-    padding: 19px;
+    padding: 17px;
+}
+#firstname-error{
+    color: red;
+    font-size: 14px;
+}
+#lastname-error{
+    color: red;
+    font-size: 14px;
 }
 .input-email{
     border: none;
@@ -135,6 +147,10 @@ input:focus{
   border-bottom-right-radius: 6px;
   border-left: none;
 }
+#email-error{
+    color: red;
+    font-size: 14px;
+  }
 #contact-number{
     height: 41px;
     width: 100%;
@@ -147,6 +163,10 @@ input:focus{
     letter-spacing: 0px;
     color: #222222;
     opacity: 1;
+}
+#number-error{
+    color: red;
+    font-size: 14px;
 }
 .subtitle{
     text-align: left;
@@ -174,6 +194,10 @@ input:focus{
     color: #222222;
     opacity: 1;
 }
+#password-error{
+    color: red;
+    font-size: 14px; 
+}
 #confirm-password{
     background: #F7FAFF 0% 0% no-repeat padding-box;
     border: 1px solid #DDDDDD;
@@ -184,6 +208,10 @@ input:focus{
     letter-spacing: 0px;
     color: #222222;
     opacity: 1;
+}
+#confirmPass-error{
+    color: red;
+    font-size: 14px; 
 }
 #nxtbtn{
     background: transparent linear-gradient(270deg, #386CB5 0%, #669FED 100%) 0% 0% no-repeat padding-box;
@@ -345,7 +373,10 @@ input:focus{
       #logo{
         width:250px;
       }
-      #floatingfName, #floatinglName {
-         margin-top: 10px;
-}
+      .lastname{
+        margin-top: 14px;
+      }
+      #Labelflname{
+          padding: 16px;
+      }
 }

@@ -32,12 +32,14 @@
                             <div id="step1">
                               <div class="row">
                                <div class="col-md-6 form-floating">
-                                 <input type="text" class="form-control" placeholder="First name" aria-label="First name" id="floatingfName">
+                                 <input type="text" class="form-control" placeholder="First name" aria-label="First name" id="floatingfName" onkeyup= "validateName()">
                                  <label for="floatingfName" id="Labelflname">First Name</label>
+                                 <span id="firstname-error"></span>
                                </div>
-                               <div class="col-md-6 form-floating">
-                                 <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="floatinglName">
+                               <div class="col-md-6 form-floating lastname">
+                                 <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="floatinglName" onkeyup= "validateName()">
                                  <label for="floatinglName" id="Labelflname">Last Name</label>
+                                 <span id="lastname-error"></span>    
                                </div>
                              </div>
                              <div class="input-group mt-3" id="Emailjs">
@@ -48,16 +50,18 @@
                               <span id="email-error"></span>
                              </div>
                              <div class="input-group mt-3" id="Mnumber">
-                                <input type="text" class="form-control" placeholder="Mobile Number"  id="contact-number"  name="number" autocomplete="off">
-                                <p id="number-error"></p>
+                                <input type="text" class="form-control" placeholder="Mobile Number"  id="contact-number"  onkeyup= "validateMobileno()" name="number" autocomplete="off">
+                                <span id="number-error"></span>
                              </div>
                              <h6 class="subheading mt-3">Create Password</h6>
                              <p class="subtitle">Password must contain one special character, one capital letter and be at least 6 characters long.</p>
                              <div class="password">
-                                <input type="text" class="form-control" placeholder="Enter Password" id="contact-password">
+                                <input type="text" class="form-control" placeholder="Enter Password" id="contact-password"  onkeyup="validatePswd()">
+                                <span id="password-error"></span>
                              </div>
                              <div class="confirmPass mt-3">
-                                <input type="text" class="form-control" placeholder="Confirm Password" id="confirm-password">
+                                <input type="text" class="form-control" placeholder="Confirm Password" id="confirm-password" onkeyup="matchPassword()">
+                                <span id="confirmPass-error"></span>
                              </div>
                              <div class="float-end mt-4" id="nxtbtn">
                                 <button class="btn me-md-2"  onclick=Next() type="button">Next Step &#8594;</button>
@@ -94,7 +98,7 @@
                                 </div>
                                 <div class="createaccount-section mt-5">
                                     <span class=" float-start span-text" onclick=prev() id="stepback">&#8592;Step Back</span>
-                                    <button class="float-end create-btn" type="button">
+                                    <button class="float-end create-btn" type="button" onclick=" return validateForm()">
                                      <span class="createtext">Create Account</span>
                                     </button>
                                 </div>
