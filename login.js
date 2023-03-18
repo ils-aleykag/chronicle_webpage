@@ -32,20 +32,17 @@ function validateEmail(){
         Emailerr.style.visibility="visible";
         Emailerr.innerHTML='*Please enter your email address';
         document.getElementById("contact-email").style.borderBottom = "2px solid red";
-        document.getElementById("regt").style.marginTop = "0px";
         return false;
     }
     else if(!regEmail.test(email)){
         Emailerr.style.visibility="visible";
         Emailerr.innerHTML='*Please enter valid email address';
         document.getElementById("contact-email").style.borderBottom = "2px solid red";
-        document.getElementById("regt").style.marginTop = "0px";
         return false;
     }
     else {
         Emailerr.style.visibility="hidden";
         document.getElementById("contact-email").style.borderBottom = "1px solid #ced4da";
-        document.getElementById("Emailjs").style.marginBottom = "1px";
     }
 return true;
 }
@@ -57,19 +54,17 @@ function validatePswd(){
         Passerr.innerHTML=' *Please enter your password';
         Passerr.style.visibility="visible";
         document.getElementById('contact-password').style.borderBottom = "2px solid red";
-        document.getElementById("regt").style.marginTop = "3px";
+        document.getElementById("contact-email").style.display="block";
         return false;
     }
     else if(password!="aleyka") {
         Passerr.innerHTML='*Password is not valid, enter correct password!';
         Passerr.style.visibility="visible";
         document.getElementById('contact-password').style.borderBottom = "2px solid red";
-        document.getElementById("regt").style.marginTop = "3px";
         return false;
     }
     else if(password == "aleyka") {
         document.getElementById('contact-password').style.borderBottom = "1px solid #ced4da";
-        document.getElementById('RemmJs').style.marginTop = "4px";
         Passerr.style.visibility="hidden";
     }
 

@@ -135,20 +135,6 @@ function validateForm(){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function getIp(callback) {
 	fetch('https://ipinfo.io/json?token=d2cbda6c7125f3', { headers: { 'Accept': 'application/json' }})
 	  .then((resp) => resp.json())
