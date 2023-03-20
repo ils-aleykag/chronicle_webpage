@@ -33,16 +33,15 @@ body {
     background: #487FCC 0% 0% no-repeat padding-box;
     box-shadow: 0px 1px 4px #15223214;
     opacity: 1;
+    z-index: 1;
+    position: absolute;
   }
   
   .menu-icon {
     display: none;
   }
   .main-title {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-    letter-spacing: 0px;
+    margin-left: 260px;
     color: #FFFFFF;
     opacity: 1;
   }
@@ -99,6 +98,7 @@ body {
     opacity: 1;
     margin-top: 10px;
     margin-left: 10px;
+    z-index: 9;
   }
   
   .sidebar-title {
@@ -393,6 +393,10 @@ body {
       grid-template-areas:
         "header"
         "main";
+    }
+
+    .main-title{
+      margin-left: 0;
     }
   
     #sidebar {
