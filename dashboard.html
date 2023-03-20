@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
   <link rel = "stylesheet" href="dashboard.css" >
   <script src="https://kit.fontawesome.com/0c9e474dd2.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   <title>Dashboard</title>
 </head>
 <body>
@@ -29,7 +30,7 @@
 
       <!-- Header -->
       <header class="header">
-        <div class="menu-icon" onclick="openSidebar()">
+        <div class="menu-icon" onclick="openSidebar()" style="color: white;">
           <span class="material-icons-outlined">menu</span>
         </div>
         <div class="header-left">
@@ -39,11 +40,13 @@
         </div>
         <div class="header-right">
           <button class="btn me-md-2" id="addbtn" type="button">&#43;ADD NEW SCHOOL</button>
-          <span class="rounded-circle">2</span>
-          <span class="material-icons-outlined" style="color: white;">notifications</span>
+          <div class="position-relative" style="    margin: 0 7px;">
+            <span class="rounded-circle position-absolute">2</span>
+            <span class="material-icons-outlined" style="color: white;">notifications</span>
+          </div>
           <span class="material-icons-outlined" style="color: white;">account_circle</span>
-          <span id="user-name my-auto" style="top: -5px; color: #FFFFFF; position: relative;  overflow-x: hidden;"> Vincent Williams &nbsp; </span>
-          <i class="fa-solid fa-angle-down my-auto" style="top: -5px; color: #FFFFFF; position: relative;"></i>
+          <span id="user-name" class="my-auto d-none d-md-block"style="top: -5px; color: #FFFFFF; position: relative;  overflow-x: hidden;"> Vincent Williams &nbsp; </span>
+          <i class="fa-solid fa-angle-down my-auto" style="top: -5px; color: #FFFFFF; position: relative; padding: 5px;"></i>
         </div>
       </header>
       <!-- End Header -->
@@ -88,6 +91,7 @@
       <!-- End Sidebar -->
 
       <!-- Main -->
+      <div class="blank" style="height: 100px"></div>
       <main class="main-container">
         <div class="main-cards">
           <div class="card">
@@ -133,22 +137,9 @@
               <div class="chart-left">
                   <p><u class="underline">Roster</u><span class="lgtext">  | Teachers</span></p>
               </div>
-              <div class="chart-right mr-5">
-                <span class="form-check">
-                  <input class="form-check-input shadow-none rounded-circle" type="checkbox" value="" id="flexCheckChecked">
-                  <label class="form-check-label" for="flexCheckChecked">
-                     Active
-                  </label>
-                </span>
-                <span class="form-check">
-                <input class="form-check-input shadow-none rounded-circle" type="checkbox" value="" id="flexCheckChecked">
-                <label class="form-check-label" for="flexCheckChecked">
-                    Inactive
-                </label>
-              </span>
-              </div>
+              
             </div>
-            <div id="bar-chart"></div>
+            <canvas id="bar-chart" style="width:100%;max-width:600px"></canvas>
             
           </div>
           <div class="charts-card">
@@ -232,7 +223,7 @@
         </div> 
         </div> 
       </main>
-      <!-- End Main -->
+        <!-- End Main -->
     </div>
     <!-- Scripts -->
     
