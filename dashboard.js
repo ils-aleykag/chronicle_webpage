@@ -99,18 +99,6 @@ new Chart("pie-chart", {
   },
   options: {
     plugins: {
-      datalabels: {
-        formatter: (value) => {
-            let sum = 0;
-            let dataArr = yValues;
-            dataArr.map(data => {
-                sum += data;
-            });
-            let percentage = (value*100 / sum).toFixed(2)+"%";
-            return percentage;
-        },
-        color: '#fff',
-    },
       legend: {
         display: true,
         position: 'left',
