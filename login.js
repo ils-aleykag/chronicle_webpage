@@ -18,7 +18,7 @@ function changeImage() {
         image.src = "img/eye.png";
     }
     else {
-        image.src = "img/eye-closed.jpg";
+        image.src = "img/eye-closed.png";
     }
 }
 
@@ -57,13 +57,13 @@ function validatePswd(){
         document.getElementById("contact-email").style.display="block";
         return false;
     }
-    else if(password!="aleyka") {
+    else if(password!="Aleyka@123") {
         Passerr.innerHTML='*Password is not valid, enter correct password!';
         Passerr.style.visibility="visible";
         document.getElementById('contact-password').style.borderBottom = "2px solid red";
         return false;
     }
-    else if(password == "aleyka") {
+    else if(password == "Aleyka@123") {
         document.getElementById('contact-password').style.borderBottom = "1px solid #ced4da";
         Passerr.style.visibility="hidden";
     }
@@ -78,7 +78,7 @@ function validateForm(){
         return false;
     }
     else{
-        window.alert("Details saved successfully!");
+        window.alert("LogedIn successfully!");
     }
     return true;
 }
