@@ -2,9 +2,10 @@ body{
     background-image: url('img/Bg.png');
     background-repeat: no-repeat;
     font-style: Open Sans;
+    height: 100vh;
     }
 #logo{
-    width:350px;
+    width:280px;
     }
 .card{
     width: 65%;
@@ -18,7 +19,7 @@ body{
 
 .card-title{
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 0px;
     color: #000000;
     text-transform: uppercase;
@@ -34,20 +35,20 @@ body{
 
 .input-group-img {
       display: inline-block;
-      /*width: 55px; */
+      width: 36px; 
       height: 39px;
       background: #F7FAFF 0% 0% no-repeat padding-box;
       border: 1px solid #DDDDDD;
       border-radius: 6px;
       opacity: 1;
+      border-right: none;
 }
 #input_img_1{
-    width: 20px;
-    height: 16px;
-    background: transparent url('img/email.png') 0% 0% no-repeat padding-box;
+    width: 18px;
+    height: 14px;
     opacity: 1;
     margin-left: 13px;
-    margin-top: 6px;
+    margin-top: 12px;
 }
 #contact-email{
     width: 63px;
@@ -96,6 +97,7 @@ input:focus{
   #contact-email::placeholder{
     color:#000000 !important;
     font-weight: 600;
+    font-size: 14px;
 }
 @media (max-width:991px){
     .card{
