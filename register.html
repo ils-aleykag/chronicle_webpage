@@ -32,38 +32,49 @@
                             <div id="step1">
                               <div class="row">
                                <div class="col-md-6 form-floating">
-                                 <input type="text" class="form-control" placeholder="First name" aria-label="First name" id="floatingfName" onkeyup= "validateName()">
+                                 <input type="text" class="form-control" placeholder="First name" aria-label="First name" id="floatingfName" onkeyup= "validateFirstname()">
                                  <label for="floatingfName" id="Labelflname">First Name</label>
-                                 <span id="firstname-error"></span>
+                                 <span id="firstname-error">&nbsp;</span>
                                </div>
                                <div class="col-md-6 form-floating lastname">
-                                 <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="floatinglName" onkeyup= "validateName()">
+                                 <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="floatinglName" onkeyup= "validateLastname()">
                                  <label for="floatinglName" id="Labelflname">Last Name</label>
                                  <span id="lastname-error"></span>    
                                </div>
                              </div>
-                             <div class="input-group mt-3" id="Emailjs">
+                             <div class="input-group" id="Emailjs">
                               <span class="input-group-img">
                                 <img src="img/email.png" id="input_img_1">
                               </span>
                               <input type="email" class="form-control" placeholder="Email ID"  id="contact-email"  onkeyup= "validateEmail()" name="email" autocomplete="off">
-                              <span id="email-error"></span>
-                             </div>
-                             <div class="input-group mt-3" id="Mnumber">
+                              <div class="col-12">
+                                <span id="email-error">&nbsp;</span>
+                              </div>
+                            </div>
+                             <div class="input-group" id="Mnumber">
                                 <input type="text" class="form-control" placeholder="Mobile Number"  id="contact-number"  onkeyup= "validateMobileno()" name="number" autocomplete="off">
-                                <span id="number-error"></span>
+                                <div class="col-12">
+                                    <span id="number-error">&nbsp;</span>
+                                </div>
                              </div>
-                             <h6 class="subheading mt-3">Create Password</h6>
+                             <h6 class="subheading">Create Password</h6>
                              <p class="subtitle">Password must contain one special character, one capital letter and be at least 6 characters long.</p>
                              <div class="password">
                                 <input type="text" class="form-control" placeholder="Enter Password" id="contact-password"  onkeyup="validatePswd()">
-                                <span id="password-error"></span>
+                                <div class="col-12">
+                                    <span id="password-error">&nbsp;</span>
+                                </div>
                              </div>
-                             <div class="confirmPass mt-3">
+                             <div class="confirmPass">
                                 <input type="text" class="form-control" placeholder="Confirm Password" id="confirm-password" onkeyup="matchPassword()">
-                                <span id="confirmPass-error"></span>
+                                <div class="col-12">
+                                    <span id="confirmPass-error">&nbsp;</span>
+                                </div>
                              </div>
-                            <br><br><br>
+                             <div class="float-end" id="nxtbtn">
+                                <button class="btn me-md-2"  onclick=Next() type="button">Next Step &#8594;</button>
+                             </div>
+                            <br><br>
                              <hr class="hrlgn">
                              <div class="login-section">
                                 <span class=" float-start span-text" id="Dacct">Do have an account?</span>
@@ -75,22 +86,37 @@
                             <div id="step2">
                                 <div class="school mt-4">
                                     <input type="text" class="form-control" placeholder="School / University / Institute Name*" id="schoolName">
+                                    <div class="col-12">
+                                        <span id="school-error">&nbsp;</span>
+                                    </div>
                                 </div>
-                                <div class="state mt-4">
+                                <div class="state">
                                     <input type="text" class="form-control" placeholder="State*" id="stateName">
+                                    <div class="col-12">
+                                        <span id="state-error">&nbsp;</span>
+                                    </div>
                                 </div>
-                                <div class="city mt-4">
+                                <div class="city">
                                     <input type="text" class="form-control" placeholder="City*" id="cityName">
+                                    <div class="col-12">
+                                        <span id="city-error">&nbsp;</span>
+                                    </div>
                                 </div>
-                                <div class="Country mt-4">
+                                <div class="Country">
                                     <input type="text" class="form-control" placeholder="Country*" id="countryName">
+                                    <div class="col-12">
+                                        <span id="county-error">&nbsp;</span>
+                                    </div>
                                 </div>
-                                <div class="Zip mt-4">
-                                    <input type="text" class="form-control" placeholder="Zip Code*" id="zipcode">
+                                <div class="Zip">
+                                    <input type="text" class="form-control" placeholder="Zip Code*" id="zipcode" onkeypress="return onlyNumberKey(event)"  maxlength="6">
+                                    <div class="col-12">
+                                        <span id="zipcode-error">&nbsp;</span>
+                                    </div>
                                 </div>
-                                <div class="form-check mt-4">
-                                    <input class="form-check-input shadow-none rounded-circle" type="checkbox" value="" id="flexCheckChecked">
-                                    <label class="form-check-label" for="flexCheckChecked">
+                                <div class="form-check">
+                                    <input class="form-check-input shadow-none rounded-circle" type="checkbox" value="" id="flexCheckChecked" style="cursor: pointer">
+                                    <label class="form-check-label" for="flexCheckChecked" style="font-size: 14px;">
                                         I agree to the <b class="terms">Terms of service</b> and <b class="terms">Privacy Policy</b>.
                                     </label>
                                 </div>

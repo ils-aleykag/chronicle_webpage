@@ -5,7 +5,7 @@ body{
     font-style: Open Sans;
 }
 #logo{
-    width:350px;
+    width:300px;
     }
 .card{
    width: 75%;
@@ -16,9 +16,16 @@ body{
    border-radius: 20px;
    opacity: 1;
 }
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 2rem 1rem;
+}
+
 .card-title{
-    /*width: 173px;*/
-   height: 33px;
+    /*width: 173px;
+   height: 33px; */
+   font-weight:700;
    text-align: left;
    letter-spacing: 0px;
    color: #000000;
@@ -80,8 +87,8 @@ input:focus{
   border-bottom: 1px solid #DDDDDD !important;
 }
 #floatingfName,#floatinglName{
-   /* width: 167px;
-    height: 48px; */
+   /* width: 167px; */
+    height: 43px;
     background: #F7FAFF 0% 0% no-repeat padding-box;
     border: 1px solid #DDDDDD;
     border-radius: 6px;
@@ -89,25 +96,26 @@ input:focus{
 }
 
 #Labelflname{
-    color:#000000 !important;
-    font-weight: 600;
-}
-#Labelflname{
     height: 22px;
     text-align: left;
     /*font: normal normal 600 16px/22px Open Sans;*/
     letter-spacing: 0px;
-    color: #222222;
+    color:#000000 !important;
+    font-weight: 600;
+    font-size: 14px;
     opacity: 1;
-    padding: 17px;
+    padding: 10px;
+    padding-left: 25px;
 }
 #firstname-error{
     color: red;
-    font-size: 14px;
+    font-size: 13px;
+    
 }
 #lastname-error{
     color: red;
-    font-size: 14px;
+    font-size: 13px;
+   
 }
 .input-email{
     border: none;
@@ -120,7 +128,7 @@ input:focus{
 .input-group-img {
        display: inline-block;
        width: 36px; 
-       height: 41px;
+       height: 43px;
        background: #F7FAFF 0% 0% no-repeat padding-box;
        border: 1px solid #DDDDDD;
        border-radius: 6px;
@@ -128,20 +136,19 @@ input:focus{
        border-right: none;
 }
 #input_img_1{
-    width: 20px;
-    height: 16px;
+    width: 18px;
+    height: 14px;
     opacity: 1;
     margin-left: 13px;
-    margin-top: 6px;
+    margin-top: 11px;
 }
 #contact-email{
-  height: 41px;
+  height: 43px;
   background: #F7FAFF 0% 0% no-repeat padding-box;
   border: 1px solid #DDDDDD;
   opacity: 1;
   width: 63px;
   text-align: left;
-  /*font: normal normal 550 16px/38px Open Sans;*/
   letter-spacing: 0px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -149,10 +156,12 @@ input:focus{
 }
 #email-error{
     color: red;
-    font-size: 14px;
+    font-size: 13px;
+    padding: 8px;
   }
 #contact-number{
-    height: 41px;
+    height: 43px;
+    padding-left: 90px;
     width: 100%;
     background: #F7FAFF 0% 0% no-repeat padding-box;
     border: 1px solid #DDDDDD;
@@ -166,14 +175,15 @@ input:focus{
 }
 #number-error{
     color: red;
-    font-size: 14px;
+    font-size: 13px;
+    padding: 8px;
 }
 .subtitle{
     text-align: left;
     /*font: normal normal normal 16px/22px Open Sans;*/
     letter-spacing: 0px;
     color: #000000;
-    font-size: 15px;
+    font-size: 14px;
     opacity: 0.5;
 }
 .subheading{
@@ -184,6 +194,7 @@ input:focus{
     font-size: 17px;
 }
 #contact-password{
+    height: 43px;
     background: #F7FAFF 0% 0% no-repeat padding-box;
     border: 1px solid #DDDDDD;
     border-radius: 6px;
@@ -196,9 +207,11 @@ input:focus{
 }
 #password-error{
     color: red;
-    font-size: 14px; 
+    font-size: 13px; 
+    padding: 8px;
 }
 #confirm-password{
+    height: 43px;
     background: #F7FAFF 0% 0% no-repeat padding-box;
     border: 1px solid #DDDDDD;
     border-radius: 6px;
@@ -211,7 +224,8 @@ input:focus{
 }
 #confirmPass-error{
     color: red;
-    font-size: 14px; 
+    font-size: 13px; 
+    padding: 8px;
 }
 #nxtbtn{
     background: transparent linear-gradient(270deg, #386CB5 0%, #669FED 100%) 0% 0% no-repeat padding-box;
@@ -234,12 +248,12 @@ hr {
    /* width: 159px;
     height: 22px; */
     text-align: left;
-    /*font: normal normal 600 16px/22px Open Sans;*/
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
-    margin-top: 32px;
-    font-weight: 650;
+    margin-top: 19px;
+    font-weight: 700;
+    font-size: 14px;
 }
 .login-btn{
    width: 119px;
@@ -249,7 +263,7 @@ hr {
    border-radius: 6px;
    opacity: 1;
    border: none;
-   margin-top: 23px;
+   margin-top: 10px;
 }
 .lgntext{
     width: 50px;
@@ -286,43 +300,64 @@ input:focus{
 #contact-email::placeholder{
     color:#000000 !important;
     font-weight: 600;
+    font-size: 14px;
 }
 #contact-number::placeholder{
     color:#000000 !important;
     font-weight: 600;
+    font-size: 14px;
 }
 #contact-password::placeholder{
     color:#000000 !important;
     font-weight: 600;
+    font-size: 14px;
 }
 #confirm-password::placeholder{
     color:#000000 !important;
     font-weight: 600;
+    font-size: 14px;
 }
 .iti {
     position: relative;
     display: inline-block;
     width: 100%;
 }
+.iti__flag-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 3px !important;
+}
 .iti--separate-dial-code .iti__selected-flag {
     background-color: white !important;
 }
+
+/************* Step-2 *****************/
 #step2{
     display: none;
 }
-.school, .state, .city, .Country, .Zip{
+#schoolName, #stateName, #cityName, #countryName, #zipcode{
     background: #F7FAFF 0% 0% no-repeat padding-box;
     border: 1px solid #DDDDDD;
     border-radius: 6px;
     opacity: 1;
+    height: 43px;
+}
+.createaccount-section{
+    display: flex;
+    justify-content: space-between;
 }
 #stepback{
     text-align: left;
     font-weight: 650;
+    font-size: 15px;
     letter-spacing: 0px;
     color: #222222;
     opacity: 1;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 14px;
 }
 .create-btn{
     background: transparent linear-gradient(270deg, #386CB5 0%, #669FED 100%) 0% 0% no-repeat padding-box;
@@ -339,44 +374,56 @@ input:focus{
     color: #FFFFFF;
     opacity: 1;
     padding: 6px;
+    font-size: 14px;
 }
 .terms{
     color: #386CB5;
 }
-#flexCheckChecked{
-      cursor: pointer;
+
+.form-check-input:checked {
+    background-color: rgb(43, 214, 43);
+    border-color: rgb(226, 226, 226);
 }
 #schoolName::placeholder{
     color:#000000 !important;
     font-weight: 600;
+    font-size: 14px;
 }
 #stateName::placeholder{
     color:#000000 !important;
     font-weight: 600;
+    font-size: 14px;
 }
 #cityName::placeholder{
     color:#000000 !important;
     font-weight: 600;
+    font-size: 14px;
 }
 #countryName::placeholder{
     color:#000000 !important;
     font-weight: 600;
+    font-size: 14px;
 }
 #zipcode::placeholder{
     color:#000000 !important;
     font-weight: 600;
+    font-size: 14px;
+}
+#school-error, #state-error, #city-error, #county-error, #zipcode-error {
+    color: red;
+    font-size: 13px; 
+}
+@media(max-width: 767px){
+    #Emailjs{
+        margin-top: 19px;
+    }
 }
 @media (max-width:991px){
       .card{
          width: 100%;
+         margin-top: 3px;
       }
       #logo{
         width:250px;
-      }
-      .lastname{
-        margin-top: 14px;
-      }
-      #Labelflname{
-          padding: 16px;
       }
 }

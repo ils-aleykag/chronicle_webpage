@@ -5,12 +5,13 @@ var Mobilerr = document.getElementById('number-error');
 var Passerr = document.getElementById('password-error');
 var Confirmerr = document.getElementById('confirmPass-error');
 
+
 function validateFirstname(){
     var fname = document.getElementById('floatingfName').value;
 	if(fname.length ==""){
 		Firstnamerr.style.visibility="visible";
-		Firstnamerr.innerHTML='*Please enter your first name';
-		document.getElementById("floatingfName").style.borderBottom = "2px solid red";
+		Firstnamerr.innerHTML='*Please enter firstname';
+		document.getElementById("floatingfName").style.borderBottom = "2px solid #386CB5";
 		return false;
 	}
 	else{
@@ -23,8 +24,8 @@ function validateLastname(){
 	var lname = document.getElementById('floatinglName').value;
 	if(lname.length ==""){
 		Lastnamerr.style.visibility="visible";
-		Lastnamerr.innerHTML='*Please enter your name';
-		document.getElementById("floatinglName").style.borderBottom = "2px solid red";
+		Lastnamerr.innerHTML='*Please enter lastname';
+		document.getElementById("floatinglName").style.borderBottom = "2px solid #386CB5";
 		return false;
 	}
 	else {
@@ -40,7 +41,7 @@ function validateEmail(){
     var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
     if(email.length == ""){
         Emailerr.style.visibility="visible";
-        Emailerr.innerHTML='*Please enter your email address';
+        Emailerr.innerHTML='*Please enter email address';
         document.getElementById("contact-email").style.borderBottom = "2px solid red";
         return false;
     }
@@ -65,7 +66,7 @@ function validateMobileno(){
 	 var regMobile = /^\d{10}$/;
 	 if(mobile.length == ""){
 		Mobilerr.style.visibility="visible";
-		Mobilerr.innerHTML="*Please enter your mobile number";
+		Mobilerr.innerHTML="*Please enter mobile number";
 		document.getElementById("contact-number").style.borderBottom = "2px solid red";
 		return false;
 	}
@@ -81,12 +82,13 @@ function validateMobileno(){
 	}
 return true;
 }
+
 function validatePswd() {
 	var password = document.getElementById('contact-password').value;
     sessionStorage.setItem('Password', password);
 	var regPass = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{6,}$/ ;
     if(password.length == 0){
-		Passerr.innerHTML='*Please enter your password';
+		Passerr.innerHTML='*Please enter password';
         Passerr.style.visibility="visible";
         document.getElementById('contact-password').style.borderBottom = "2px solid red";
         return false;
@@ -116,25 +118,27 @@ function matchPassword() {
   } 
   else {  
 	Confirmerr.style.visibility="hidden";
-	document.getElementById("contact-password").style.borderBottom = "1px solid #ced4da";
+	document.getElementById("confirm-password").style.borderBottom = "1px solid #ced4da";
   }  
 } 
 
 
 function validateForm(){
-    if(!validateName() || validateEmail() || validateMobileno() || validatePswd() || matchPassword()){
+    if(!(validateFirstname() ||  validateLastname() || validateEmail() || validateMobileno() || validatePswd() || matchPassword())){
          //loginBtn.classList.add("disable");
 		 window.alert("Please enter all the details to register!");
         //Suberr.innerHTML='*Please enter details in all feilds to submit';
         return false;
     }
     else{
-        window.alert("Details saved successfully!");
+        window.alert("Details saved successfully! you can now login");
+		//window.location.href = "login.html";
     }
     return true;
 }
 
 
+/****** country code *******/
 function getIp(callback) {
 	fetch('https://ipinfo.io/json?token=d2cbda6c7125f3', { headers: { 'Accept': 'application/json' }})
 	  .then((resp) => resp.json())
@@ -154,6 +158,8 @@ function getIp(callback) {
      utilsScript:
        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
    });
+
+/**** next-prev button *****/
    function Next(){
 		document.getElementById("step1").style.display = "none";
 		document.getElementById("step2").style.display = "block"
@@ -170,3 +176,111 @@ function getIp(callback) {
 	   document.getElementsByClassName("step2")[0].style.color="#AFC4E1";
 	   document.getElementsByClassName("hrstep2")[0].style.background="#AFC4E1";
    }
+
+
+   /***validation for step2 ****/
+
+   // using spread syntax to convert collection to array forEach is an array method
+ [...document.getElementsByTagName("input")].forEach(function(item) {
+	// adding eventListener to the elements
+	item.addEventListener('keypress', function() {
+	  // calling the methods
+	  // this.id will be the id of the clicked button
+	  // there is a method in the object by same name, which will be trigger
+	  obj[this.id]();
+  
+	})
+})
+
+var Schlerr = document.getElementById('school-error');
+var Staterr = document.getElementById('state-error');
+var Cityerr = document.getElementById('city-error');
+var Countryerr = document.getElementById('county-error');
+var Ziperr = document.getElementById('zipcode-error');
+  
+  var obj = {
+	schoolName: function() {
+	  console.log('schoolName');
+	  var schlName = document.getElementById('schoolName').value;
+	  if(schlName.length ==""){
+		Schlerr.style.visibility="visible";
+		Schlerr.innerHTML='*Please enter school name';
+		document.getElementById("schoolName").style.borderBottom = "2px solid red";
+		return false;
+	  }
+	  else {
+		Schlerr.style.visibility="hidden";
+		document.getElementById("schoolName").style.borderBottom = "1px solid #ced4da";
+	  }
+	  return true;
+	},
+	stateName: function() {
+	  console.log('stateName');
+	  var stateName = document.getElementById('stateName').value;
+	  if(stateName.length ==""){
+		Staterr.style.visibility="visible";
+		Staterr.innerHTML='*Please enter statename';
+		document.getElementById("stateName").style.borderBottom = "2px solid red";
+		return false;
+	  }
+	  else {
+		Staterr.style.visibility="hidden";
+		document.getElementById("stateName").style.borderBottom = "1px solid #ced4da";
+	  }
+	  return true;
+	},
+	cityName: function() {
+	  console.log('cityName');
+	  var cityName = document.getElementById('cityName').value;
+	  if(cityName.length ==""){
+		Cityerr.style.visibility="visible";
+		Cityerr.innerHTML='*Please enter city name';
+		document.getElementById("cityName").style.borderBottom = "2px solid red";
+		return false;
+	  }
+	  else {
+		Cityerr.style.visibility="hidden";
+		document.getElementById("cityName").style.borderBottom = "1px solid #ced4da";
+	  }
+	  return true;
+	},
+	countryName: function() {
+	  console.log('countryName');
+	  var countryName = document.getElementById('countryName').value;
+	  if(countryName.length ==""){
+		Countryerr.style.visibility="visible";
+		Countryerr.innerHTML='*Please enter country name';
+		document.getElementById("countryName").style.borderBottom = "2px solid red";
+		return false;
+	  }
+	  else {
+		Countryerr.style.visibility="hidden";
+		document.getElementById("countryName").style.borderBottom = "1px solid #ced4da";
+	  }
+	  return true;
+	},
+	zipcode: function() {
+	  console.log('zipcode');
+	  var zipcode = document.getElementById('zipcode').value;
+	  if(zipcode.length ==""){
+		Ziperr.style.visibility="visible";
+		Ziperr.innerHTML='*Please enter zipcode, sholud be number only';
+		document.getElementById("zipcode").style.borderBottom = "2px solid red";
+		return false;
+	  }
+	  else {
+		Ziperr.style.visibility="hidden";
+		document.getElementById("zipcode").style.borderBottom = "1px solid #ced4da";
+	  }
+	  return true;
+	}
+  }
+
+/**zipcode **/
+function onlyNumberKey(evt) {            
+	// Only ASCII character in that range allowed
+	var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+	if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+		return false;
+	return true;
+}
