@@ -16,7 +16,7 @@ function closeSidebar() {
   }
 }
 
-
+Chart.register(ChartDataLabels);
 
 // ---------- CHARTS ----------
 
@@ -42,6 +42,9 @@ new Chart("bar-chart", {
   },
   options: {
     plugins: {
+      datalabels: {
+        display: false,
+      },
       legend: {
         display: true,
         position: 'right',
@@ -65,6 +68,9 @@ new Chart("bar-chart", {
   
       y: {
         stacked:true,
+        border: {
+          display: false
+      },
         ticks: {
           stepSize: 100,   // forces step size to be 50 units
           min: 0,
@@ -99,10 +105,23 @@ new Chart("pie-chart", {
   },
   options: {
     plugins: {
+      datalabels: {
+        formatter: (value) => {
+            let sum = 0;
+            let dataArr = yValues;
+            dataArr.map(data => {
+                sum += data;
+            });
+            let percentage = (value*100 / sum).toFixed(0)+"%";
+            return percentage;
+        },
+        color: '#fff',
+        
+    },
       legend: {
         display: true,
         position: 'left',
-        align: 'start',
+        align: 'end',
         labels: {
             usePointStyle	: true,
             pointStyle: "circle",
