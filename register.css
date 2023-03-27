@@ -413,11 +413,7 @@ input:focus{
     color: red;
     font-size: 13px; 
 }
-@media(max-width: 767px){
-    #Emailjs{
-        margin-top: 19px;
-    }
-}
+
 @media (max-width:991px){
       .card{
          width: 100%;
