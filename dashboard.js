@@ -16,6 +16,21 @@ function closeSidebar() {
   }
 }
 
+
+// When the user clicks on the button, toggle between hiding and showing the dropdown content 
+function myFunction(e) {
+  var myDropdown = document.getElementById("myDropdown"); 
+    if (myDropdown.classList.contains('d-none')) {
+      myDropdown.classList.remove('d-none');
+      myDropdown.classList.add('d-block');
+    }else{
+      myDropdown.classList.remove('d-block');
+      myDropdown.classList.add('d-none');
+    }
+  
+}
+
+
 Chart.register(ChartDataLabels);
 
 // ---------- CHARTS ----------
@@ -117,6 +132,13 @@ new Chart("pie-chart", {
         },
         color: '#fff',
         
+    },
+    labels:{
+      render: (ctx)=>{
+        return ctx.value + " mb ";
+      },
+      position:"outside",
+      fontColor: barColors
     },
       legend: {
         display: true,

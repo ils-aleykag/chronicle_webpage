@@ -10,6 +10,7 @@
   <script src="https://kit.fontawesome.com/0c9e474dd2.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  <script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
   
   <title>Dashboard</title>
 </head>
@@ -42,13 +43,25 @@
         </div>
         <div class="header-right">
           <button class="btn me-md-2" id="addbtn" type="button">&#43;ADD NEW SCHOOL</button>
-          <div class="position-relative" style="    margin: 0 7px;">
+          <div class="position-relative" style="margin: 0 7px;">
             <span class="rounded-circle position-absolute">2</span>
             <span class="material-icons-outlined" style="color: white;">notifications</span>
           </div>
-          <span class="material-icons-outlined" style="color: white;">account_circle</span>
-          <span id="user-name" class="my-auto d-none d-md-block"style="top: -5px; margin-left: 3px; color: #FFFFFF; position: relative;  overflow-x: hidden;"> Vincent Williams &nbsp; </span>
-          <i class="fa-solid fa-angle-down my-auto" style="top: -5px; color: #FFFFFF; position: relative; padding: 5px;"></i>
+          <div class="position-relative">
+            <div class="d-flex">
+              <span class="material-icons-outlined" style="color: white;">account_circle</span>
+              <span id="user-name" class="my-auto d-none d-md-block"style="top: -5px; margin-left: 3px; color: #FFFFFF; position: relative;  overflow-x: hidden;"> Vincent Williams &nbsp; </span>
+              <i class="fa-solid fa-angle-down my-auto dropbtn" 
+              style="top: -5px; color: #FFFFFF; position: relative; padding: 5px; cursor:pointer;" onclick="myFunction(event)"></i>
+              
+            </div>
+            <div class="dropdown-content d-none" id="myDropdown">
+                <a href="#">View Profile</a>
+                <a href="#">Visit Website</a>
+                <a href="#">Help Center</a>
+                <a href="#">Sign out</a>
+            </div>
+          </div>
         </div>
       </header>
       <!-- End Header -->
@@ -178,7 +191,7 @@
               </div>
              </div>
             </div>
-            <canvas id="pie-chart" style="width:100%; margin-top: 20px;"></canvas>
+            <canvas id="pie-chart" style="width:100%"></canvas>
           </div>
         </div>
         <div>
