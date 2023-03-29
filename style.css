@@ -5,7 +5,7 @@ background-size: cover;
 font-style: Open Sans;
 }
 #logo{
-    width:350px;
+    width:300px;
 }
 .card-group{
   width: 65%;
@@ -17,27 +17,24 @@ font-style: Open Sans;
   border: none;
 }
 .login{
-  height: 33px;
-  text-align: left;
   letter-spacing: 0px;
   color: #000000;
   text-transform: uppercase;
-  opacity: 1;
   font-weight: 700;
+  font-size: 22px;
 }
 .textemail{
-  text-align: left;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   color: #000000;
   opacity: 0.5;
 }
-.input-group{
- /* background: #F7FAFF 0% 0% no-repeat padding-box; */
+/*.input-group{
+  background: #F7FAFF 0% 0% no-repeat padding-box;
   border-radius: 6px;
   opacity: 1;
-}
+} */
 .input-group-img {
     display: inline-block;
     width: 36px; 
@@ -49,24 +46,10 @@ font-style: Open Sans;
     border-right: none;
 }
 #input_img_1{
-  width: 18px;
   height: 14px;
   opacity: 1;
   margin-left: 13px;
   margin-top: 12px;
-}
-#input_img_2{
-  width: 17px;
-  height: 18px;
-  opacity: 1;
-  margin-left: 13px;
-  margin-top: 10px;
-}
-::placeholder {
-  font-size: 14px;
-  font-weight: 550;
-  color: #222222 !important;
-  opacity: 1;
 }
 #contact-email{
   height: 39px;
@@ -75,7 +58,21 @@ font-style: Open Sans;
   background: #F7FAFF 0% 0% no-repeat padding-box;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  border-right: 1px solid #DDDDDD !important;
+ /* border-right: 1px solid #DDDDDD !important;*/
+}
+#input_img_2{
+  width: 17px;
+  height: 18px;
+  opacity: 1;
+  margin-left: 13px;
+  margin-top: 10px;
+}
+#contact-password{
+  height: 39px;
+  font-size: 15px;
+  letter-spacing: 0px;
+  background: #F7FAFF 0% 0% no-repeat padding-box;
+  border-right: none;
 }
 #eyes-border{
   border-bottom-left-radius: 0px;
@@ -90,11 +87,12 @@ font-style: Open Sans;
    width: 21px;
    margin-left: 3px;
 }
-#contact-password{
-  height: 39px;
-  font-size: 15px;
-  letter-spacing: 0px;
-  background: #F7FAFF 0% 0% no-repeat padding-box;
+
+::placeholder {
+  font-size: 14px;
+  font-weight: 550;
+  color: #222222 !important;
+  opacity: 1;
 }
 .form-control:focus {
   box-shadow: none;
@@ -102,17 +100,19 @@ font-style: Open Sans;
 .form-control{
   border-left: none;
 }
-.form-group{
-  margin-top: 5px;
-  justify-content: space-between;
-}
 input:focus{
   outline: none !important;
   border-top: 1px solid #DDDDDD !important;
   border-bottom: 1px solid #DDDDDD !important;
 }
-.pswd{
-  border-right: none;
+
+.form-group{
+  margin-top: 5px;
+  justify-content: space-between;
+}
+.form-check-input:checked {
+  background-color: rgb(43, 214, 43);
+  border-color: rgb(226, 226, 226);
 }
 .form-check-label{
   font-size: 14px;
@@ -121,10 +121,6 @@ input:focus{
   color: #000000BF;
   opacity: 0.75;
 }
-.form-check-input:checked {
-  background-color: rgb(43, 214, 43);
-  border-color: rgb(226, 226, 226);
-}
 .forgot{
   font-size: 14px;
   font-weight: 500;
@@ -132,6 +128,11 @@ input:focus{
   color: #0974DD;
   opacity: 1;
   text-decoration: none;
+}
+
+.login-section{
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .login-btn{
   background: transparent linear-gradient(270deg, #386CB5 0%, #669FED 100%) 0% 0% no-repeat padding-box;
@@ -145,7 +146,6 @@ input:focus{
   font-size: 12px;
   border: none;
   width: 100%;
-  margin-top: 17px;
 }
 .logintxt{
   font-size: 16px;
@@ -155,10 +155,10 @@ input:focus{
   text-transform: uppercase;
   opacity: 1;
 }
+
 .register{
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
 }
 #Dacct{
   text-align: left;

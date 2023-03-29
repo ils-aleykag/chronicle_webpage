@@ -1,6 +1,5 @@
 var Emailerr = document.getElementById('email-error');
 var Passerr = document.getElementById('password-error');
-var Suberr = document.getElementById('submit-error');
 //var loginBtn = document.getElementById('loginbtn');
 
 const togglePassword = document.querySelector('#eye-img');
@@ -70,15 +69,17 @@ function validatePswd(){
 
 return true;
 }
+
 function validateForm(){
     if(!validateEmail() || !validatePswd()){
-         //loginBtn.classList.add("disable");
-         card.style.Height="500px";
-        //Suberr.innerHTML='*Please enter details in all feilds to submit';
         return false;
+         //loginBtn.classList.add("disable");
+         //card.style.Height="500px";
+        //Suberr.innerHTML='*Please enter details in all feilds to submit';
     }
     else{
-        window.alert("LogedIn successfully!");
+       // window.alert("LogedIn successfully!");
+        window.location.href = "dashboard.html";
     }
     return true;
 }
@@ -134,19 +135,7 @@ function getCookie(cname) {
     return "";
   } 
 
-  function validateForm(){
-    if(!validateEmail() || !validatePswd()){
-         //loginBtn.classList.add("disable");
-         card.style.Height="500px";
-        //Suberr.innerHTML='*Please enter details in all feilds to submit';
-        return false;
-    }
-    else{
-       // window.alert("LogedIn successfully!");
-        window.location.href = "dashboard.html";
-    }
-    return true;
-}
+  
 
 
 

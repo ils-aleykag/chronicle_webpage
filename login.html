@@ -16,11 +16,11 @@
            <img src="img/Logo.png"  class="mx-auto" id="logo">
         </div>
         <div class="col-md-6 right">
-          <div class="card-group mx-auto" id="card">
+          <div class="card-group mx-auto">
             <div class="card-body">
                   <h4 class="login">LOGIN</h4>
                    <p class="textemail">Enter your email address and password to get access your account.</p>
-                    <div class="input-group" id="Emailjs">
+                    <div class="input-group">
                       <span class="input-group-img">
                         <img src="img/email.png" id="input_img_1">
                       </span>
@@ -33,7 +33,7 @@
                       <span class="input-group-img">
                         <img src="img/padlock.png" id="input_img_2">
                       </span>
-                      <input type="text" class="form-control pswd" placeholder="Password" id="contact-password" onkeyup="validatePswd()" name="password">
+                      <input type="text" class="form-control" placeholder="Password" id="contact-password" onkeyup="validatePswd()" name="password">
                       <div class="input-group-append">
                         <span class="input-group-img" id="eyes-border">
                           <img src="img/eye.png" id="eye-img" onclick="changeImage()" value="Change">
@@ -43,7 +43,7 @@
                         <span id="password-error">&nbsp;</span>
                       </div>
                     </div>
-                    <div class="form-group d-flex align-items-center justify-content-between" id="RemmJs">
+                    <div class="form-group d-flex align-items-center justify-content-between">
                       <div class="float-start">
                         <input class="form-check-input shadow-none rounded-circle" onclick="setCookie()" type="checkbox" value="lsRememberMe" id="flexCheckChecked" style="cursor: pointer;">
                         <label class="form-check-label" for="flexCheckChecked">
@@ -53,14 +53,15 @@
                       <span class="float-end">
                         <a href="forget.html" class="forgot">Forgot Password?</a>
                       </span>
-                   </div>
-                    <div class="login-button p-3">
-                      <button type="submit" onclick="return validateForm()" id="loginbtn" class="login-btn"><span class="logintxt">LOGIN</span></button>
-                      <span id="submit-error"></span>
                     </div>
-                    <div class="register" id=regt>
-                      <span class=" float-start span-text" id="Dacct">Don't have an account?</span>
-                      <button onclick="location.href = 'register.html';" class="float-end register-btn" type="button"><span class="regtext">REGISTER NOW</span></button>
+                    <div class="login-section">
+                      <button class="login-btn" type="submit" onclick="return validateForm()">
+                        <span class="logintxt">LOGIN</span>
+                      </button>
+                    </div>
+                    <div class="register">
+                      <span class=" float-start" id="Dacct">Don't have an account?</span>
+                      <button class="float-end register-btn" onclick="location.href = 'register.html';" type="button"><span class="regtext">REGISTER NOW</span></button>
                     </div>
               </div>
             </div>
