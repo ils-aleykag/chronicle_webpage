@@ -356,7 +356,7 @@ body {
   /* Table */
 .table-schl caption{
   text-align: left;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 600;
   letter-spacing: 0px;
   color: #444B48;
@@ -367,7 +367,7 @@ body {
 .table-schl th{
     text-align: left;
     letter-spacing: 0px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     color: #7E84A3;
     text-transform: uppercase;
@@ -376,6 +376,13 @@ body {
 .table-schl td{
     font-size: 13px;
     font-weight: 500;
+
+}
+.table-schl td>small{
+  color: #000000;
+  opacity: 0.4;
+  font-style: italic;
+  font-size: 12px;
 }
 
 

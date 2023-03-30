@@ -123,12 +123,14 @@ function matchPassword() {
   else {  
 	Confirmerr.style.visibility="hidden";
 	document.getElementById("confirm-password").style.borderBottom = "1px solid #ced4da";
+	return true;
   }  
 } 
 
 
 function validateForm(){
-    if(!(validateFirstname() &&  validateLastname() && validateEmail() && validateMobileno() && (validatePswd() || matchPassword()) )){
+	 validateFirstname(); validateLastname(); validateEmail(); validateMobileno(); validatePswd(); matchPassword();
+    if(!(validateFirstname() &&  validateLastname() && validateEmail() && validateMobileno() &&  validatePswd() && matchPassword())){
          //loginBtn.classList.add("disable");
 		 //window.alert("Please enter all the details to register!");
         //Suberr.innerHTML='*Please enter details in all feilds to submit';
@@ -294,7 +296,7 @@ function getIp(callback) {
 	  return true;
 	}
 
-	function zipcodeValidate() {
+	function zipcodeValidate(event) {
 	  console.log('zipcode');
 	  var zipcode = document.getElementById('zipcode').value;
 	  if(zipcode.length ==""){
@@ -337,22 +339,25 @@ function policyChecked() {
 		  // display result by assigning to innerHTML of the text element.
 		  checkboxErr.style.visibility="hidden";
 		  checkboxErr.innerHTML="Thank you for accepting the agreement";
+		  return true;
 	  }
 	  else{
 		checkboxErr.style.visibility="visible";
 		checkboxErr.innerHTML = "*Please accept the polices to proceed";
+		return false;
 	  }
 }
 
 function step2Validation() {
-	if(!(schlvalidate() &&  stateValidate() && cityValidate() && countryValidate() &&  policyChecked() && zipcodeValidate() || onlyNumberKey())){
+	schlvalidate(); stateValidate(); cityValidate(); countryValidate(); policyChecked(); zipcodeValidate();
+	if(!(schlvalidate() &&  stateValidate() && cityValidate() && countryValidate() &&  policyChecked() && zipcodeValidate())){
 		//loginBtn.classList.add("disable");
 		//window.alert("Please enter all the details to register!");
 	   //Suberr.innerHTML='*Please enter details in all feilds to submit';
 	   return false;
    }
    else{
-	   window.alert("Your account is created, you can now login!")
-	   window.href="login.html"
+	   window.alert("Your account is created, you can now login!");
+	   window.location.href="login.html";
    }
 }
