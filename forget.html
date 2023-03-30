@@ -22,48 +22,64 @@
                               <span class="input-group-img">
                                 <img src="img/email.png" id="input_img_1">
                               </span>
-                              <input type="email" class="form-control" placeholder="Email ID"  id="contact-email"  onkeyup= "validateEmail()" name="email" autocomplete="off">
-                              <div class="col-12">
-                                <span id="email-error"></span>
-                              </div>
+                              <input type="email" class="form-control" placeholder="Email ID"  id="contactemail"  onkeyup="EnableDisable(this)" onkeyup= "validateEmail()" name="email" autocomplete="off">
+                              <div class="col-12" id="email-error"></div>
                             </div>
                             <div class="d-grid col-12 mx-auto" id="button">
-                                <button class="btn" type="button" value="Send Email" onclick="sendEmail()"><span id="retrive">RETRIEVE PASSWORD</span></button>
+                                <button class="btn" type="button" id="btnSubmit" value="Send Email" onclick="sendEmail()" disabled="disabled"><span id="retrive">RETRIEVE PASSWORD</span></button>
                             </div>
                      </div>
                 </div>
             </div>
         </div>
     </body>
+
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
         var Emailerr = document.getElementById('email-error');
         function validateEmail(){
-            var email = document.getElementById('contact-email').value;
+            var email = document.getElementById('contactemail').value;
             sessionStorage.setItem('EmailId', email);
             var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
             if(!regEmail.test(email)){
                Emailerr.style.visibility="visible";
                document.getElementById("Emailjs").style.marginBottom = "10px";
                Emailerr.innerHTML='*Please enter valid email address';
-               document.getElementById("contact-email").style.borderBottom = "2px solid red";
+               document.getElementById("contactemail").style.borderBottom = "2px solid red";
                // document.getElementById("regt").style.marginTop = "0px";
                return false;
             }
             else {
                Emailerr.style.visibility="hidden";
                document.getElementById("Emailjs").style.marginBottom = "6px";
-               document.getElementById("contact-email").style.borderBottom = "1px solid #ced4da";
+               document.getElementById("contactemail").style.borderBottom = "1px solid #ced4da";
             }
          return true;
     }
-    function sendEmail() {
+     
+    function EnableDisable(contactemail) {
+        //Reference the Button.
+        var btnSubmit = document.getElementById("btnSubmit");
+ 
+        //Verify the TextBox value.
+        if (contactemail.value.trim() != "" && validateEmail()) {
+            //Enable the TextBox when TextBox has value.
+            btnSubmit.disabled = false;
+        } else {
+            //Disable the TextBox when TextBox is empty.
+            btnSubmit.disabled = true;
+        }
+    };
+
+
+
+  function sendEmail() {
         Email.send({
         Host: "smtp.elasticemail.com",
         Username: "aleykademo@gmail.com",
         Password: "9C0CAF40AECD9CD72EFA16ECD45B085B9FA1",
         To: "aleykademo@gmail.com",
-        From: document.getElementById('contact-email').value,
+        From: document.getElementById('contactemail').value,
         Subject: "Sending Email using javascript",
         Body: "Well that was easy!!",
         html: "<h1>Chronicle Cloud </h1><p>Below is the link to reset password</p>"

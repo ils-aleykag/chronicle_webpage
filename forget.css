@@ -1,14 +1,13 @@
 body{
     background-image: url('img/Bg.png');
     background-repeat: no-repeat;
-    font-style: Open Sans;
     height: 100vh;
     }
 #logo{
     width:280px;
     }
 .card{
-    width: 65%;
+    width: 69%;
     border: none;
     margin-top: 30px;
     box-shadow: 0px 1px 6px #00000029;
@@ -34,9 +33,9 @@ body{
 }
 
 .input-group-img {
-      display: inline-block;
+      display: inline-block; 
       width: 36px; 
-      height: 39px;
+      height: 43px;
       background: #F7FAFF 0% 0% no-repeat padding-box;
       border: 1px solid #DDDDDD;
       border-radius: 6px;
@@ -44,17 +43,16 @@ body{
       border-right: none;
 }
 #input_img_1{
-    width: 18px;
-    height: 14px;
+    height: 12px;
     opacity: 1;
     margin-left: 13px;
-    margin-top: 12px;
+    margin-top: 11px;
+    width: 17px;
 }
-#contact-email{
-    width: 63px;
-    height: 39px;
+#contactemail{
+    height: 43px;
+    font-size: 14px;
     text-align: left;
-    /*font: normal normal 550 16px/38px Open Sans;*/
     letter-spacing: 0px;
     color: #222222;
     opacity: 1;
@@ -70,20 +68,21 @@ body{
     background: transparent linear-gradient(270deg, #386CB5 0%, #669FED 100%) 0% 0% no-repeat padding-box;
     box-shadow: 0px 0px 5px #386CB566;
     border-radius: 6px;
-    opacity: 0.5;
+    opacity: 1;
     border: none;
 }
 #retrive{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
-    letter-spacing: 0px;
+    letter-spacing: 1px;
     color: #FFFFFF;
     text-transform: uppercase;
     opacity: 1;
 }
 #email-error{
     color: red;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 600;
 }
 .form-control:focus {
      box-shadow: none;
@@ -94,7 +93,7 @@ input:focus{
     border-bottom: 1px solid #DDDDDD !important;
     border-right: 1px solid #DDDDDD !important;
   }
-  #contact-email::placeholder{
+  #contactemail::placeholder{
     color:#000000 !important;
     font-weight: 600;
     font-size: 14px;
