@@ -7,6 +7,7 @@
  <!-- <script src="https://kit.fontawesome.com/5970dcb2d9.js" crossorigin="anonymous"></script> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js'></script>
   <title>Login</title>
 </head>
 <body onload="getCookieData()">
@@ -25,9 +26,7 @@
                         <img src="img/email.png" id="input_img_1">
                       </span>
                       <input type="email" class="form-control" placeholder="Email ID"  id="contact-email"  onkeyup= "validateEmail()" name="email" autocomplete="off">
-                      <div class="col-12">
-                        <span id="email-error">&nbsp;</span>
-                      </div>
+                      <div class="col-12"  id="email-error">&nbsp;</div>
                     </div>
                     <div class="input-group">
                       <span class="input-group-img">
@@ -39,9 +38,7 @@
                           <img src="img/eye.png" id="eye-img" onclick="changeImage()" value="Change">
                         </span>
                       </div>
-                      <div class="col-12">
-                        <span id="password-error">&nbsp;</span>
-                      </div>
+                      <div class="col-12"  id="password-error">&nbsp;</div>
                     </div>
                     <div class="form-group d-flex align-items-center justify-content-between">
                       <div class="float-start">

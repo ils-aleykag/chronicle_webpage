@@ -2,30 +2,33 @@ body{
     background-image: url('img/Bg.png');
     background-repeat: no-repeat;
     background-size: cover;
-    font-style: Open Sans;
 }
 #logo{
     width:300px;
     }
 .card{
-   width: 75%;
+   width: 67%;
    margin-top: 30px;
    padding: 12px;
    background: #FFFFFF 0% 0% no-repeat padding-box;
    box-shadow: 0px 1px 6px #00000029;
    border-radius: 20px;
    opacity: 1;
+   border: none;
 }
 
 .card-body {
     flex: 1 1 auto;
-    padding: 2rem 1rem;
+    padding-left: 1em;
+    padding-top: 22px;
+   /* padding: 2rem 1rem; */
 }
 
 .card-title{
     /*width: 173px;
    height: 33px; */
    font-weight:700;
+   font-size: 21px;
    text-align: left;
    letter-spacing: 0px;
    color: #000000;
@@ -33,46 +36,49 @@ body{
    opacity: 1;
 }
 .step1{
-    top: 13px;
-    left: 35px;
+    top: 8px;
     position: relative;
-    width: 86px;
-    height: 24px;
-    text-align: left;
-   /* font: normal normal 587 16px/22px Open Sans; */
+    font-size: 14px;
     letter-spacing: 0px;
     color: #386CB5;
     text-transform: uppercase;
     opacity: 1;
-}
-.step2{
-    top: 13px;
-    left: 35px;
-    position: relative;
+    /**left: 35px; 
     width: 86px;
     height: 24px;
-    text-align: left;
-   /* font: normal normal 587 16px/22px Open Sans; */
+    text-align: left;**/
+}
+.step2{
+    top: 8px;
+    position: relative;
+    font-size: 14px;
     letter-spacing: 0px;
     color: #AFC4E1;
     text-transform: uppercase;
     opacity: 1;
+    /**left: 35px;
+    position: relative;
+    width: 86px;
+    height: 24px;
+    text-align: left; **/
 }
 .hrStep1{
     background: #386CB5 0% 0% no-repeat padding-box;
-    border-radius: 2px;
     opacity: 1;
+    margin-top: auto;
 }
 .hrstep2{
     background: #AFC4E1 0% 0% no-repeat padding-box;
-    border-radius: 2px;
     opacity: 1;
+    margin-top: auto;
 }
 .hrStep1:not([size]) {
-    height: 2px;
+    height: 3px;
+    border-radius: 10px;
 }
 .hrstep2:not([size]) {
-    height: 2px;
+    height: 3px;
+    border-radius: 10px;
 }
 .form-floating{
     border: none;
@@ -82,10 +88,11 @@ body{
 }
 
 input:focus{
-  outline: none !important;
-  border-top: 1px solid #DDDDDD !important;
-  border-bottom: 1px solid #DDDDDD !important;
+    outline: none !important;
+    border-top: 1px solid #DDDDDD !important;
+    border-bottom: 1px solid #DDDDDD !important;
 }
+
 #floatingfName,#floatinglName{
    /* width: 167px; */
     height: 43px;
@@ -93,10 +100,18 @@ input:focus{
     border: 1px solid #DDDDDD;
     border-radius: 6px;
     opacity: 1;
+    font-size: 14px;
+}
+#floatingfName:focus{
+    border-bottom: 2px solid #386CB5 !important;
+}
+
+#floatinglName:focus{
+    border-bottom: 2px solid #386CB5 !important;
 }
 
 #Labelflname{
-    height: 22px;
+    /*height: 22px;
     text-align: left;
     /*font: normal normal 600 16px/22px Open Sans;*/
     letter-spacing: 0px;
@@ -104,19 +119,41 @@ input:focus{
     font-weight: 600;
     font-size: 14px;
     opacity: 1;
-    padding: 10px;
+    padding: 9px;
     padding-left: 25px;
 }
 #firstname-error{
     color: red;
-    font-size: 13px;
-    
+    font-size: 12px;
+    font-weight: 600;
+    height: 24px;
 }
 #lastname-error{
     color: red;
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 600;
+    height: 24px;
    
 }
+/*.row label{
+    position: absolute;
+    top:0;
+    color:#000000;
+    font-size: 14px;
+    font-weight: 400;
+    pointer-events: none;
+    transform: translateY(30px);
+    transition: all 400ms ease-in-out;
+}
+.row input:focus, .row input:valid {
+    border-bottom-color: blue;
+}
+.row input:valid + label,
+.row input:focus + label {
+    color: grey;
+    font-size: 14px;
+    transform: translateY(0);
+} */
 .input-email{
     border: none;
 }
@@ -136,8 +173,7 @@ input:focus{
        border-right: none;
 }
 #input_img_1{
-    width: 18px;
-    height: 14px;
+    height: 12px;
     opacity: 1;
     margin-left: 13px;
     margin-top: 11px;
@@ -153,11 +189,13 @@ input:focus{
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   border-left: none;
+  font-size: 14px;
 }
 #email-error{
     color: red;
-    font-size: 13px;
-    padding: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    height: 24px;
   }
 #contact-number{
     height: 43px;
@@ -172,11 +210,13 @@ input:focus{
     letter-spacing: 0px;
     color: #222222;
     opacity: 1;
+    font-size: 14px;
 }
 #number-error{
     color: red;
-    font-size: 13px;
-    padding: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    height: 24px;
 }
 .subtitle{
     text-align: left;
@@ -191,7 +231,7 @@ input:focus{
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
-    font-size: 17px;
+    font-size: 15px;
 }
 #contact-password{
     height: 43px;
@@ -204,11 +244,39 @@ input:focus{
     letter-spacing: 0px;
     color: #222222;
     opacity: 1;
+    font-size: 14px;
+    border-right: none;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
 }
+#eyes-border{
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-right: 1px solid #DDDDDD;;
+    border-left: none;
+}
+/**enter password eyeimage id**/
+#eye-img{
+    margin-top: 12px;
+    cursor: pointer; 
+    border-radius: 2px;
+    width: 18px;
+    margin-left: 3px;
+ }
+
+ /**Confirm password eye image id**/
+ #eyes-img{
+    margin-top: 12px;
+    cursor: pointer; 
+    border-radius: 2px;
+    width: 18px;
+    margin-left: 3px;
+ }
 #password-error{
     color: red;
-    font-size: 13px; 
-    padding: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    height: 24px;
 }
 #confirm-password{
     height: 43px;
@@ -221,11 +289,16 @@ input:focus{
     letter-spacing: 0px;
     color: #222222;
     opacity: 1;
+    font-size: 14px;
+    border-right: none;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
 }
 #confirmPass-error{
     color: red;
-    font-size: 13px; 
-    padding: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    height: 24px;
 }
 #nxtbtn{
     background: transparent linear-gradient(270deg, #386CB5 0%, #669FED 100%) 0% 0% no-repeat padding-box;
@@ -235,7 +308,8 @@ input:focus{
 }
 .btn{
     color: #FFFFFF;
-    opacity: 1
+    opacity: 1;
+    font-size: 14px;
 }
 hr {
     margin: 1rem 0;
@@ -266,8 +340,7 @@ hr {
    margin-top: 10px;
 }
 .lgntext{
-    width: 50px;
-    height: 22px;
+     font-size: 14px;
     text-align: left;
     /*font: normal normal 600 16px/22px Open Sans;*/
     letter-spacing: 0px;
@@ -283,6 +356,7 @@ hr {
     color: #000000;
     opacity: 1;
     padding: 10px;
+    font-size: 12px;
 }
 .form-control:focus {
     box-shadow: none;
@@ -291,16 +365,10 @@ hr {
     border: none;
     background: #F7FAFF 0% 0% no-repeat padding-box;
 }
-  
-input:focus{
-    outline: none !important;
-    border-top: 1px solid #DDDDDD !important;
-    border-bottom: 1px solid #DDDDDD !important;
-}
 #contact-email::placeholder{
     color:#000000 !important;
-    font-weight: 600;
     font-size: 14px;
+    font-weight: 550;
 }
 #contact-number::placeholder{
     color:#000000 !important;
@@ -342,6 +410,7 @@ input:focus{
     border-radius: 6px;
     opacity: 1;
     height: 43px;
+    font-size: 14px;
 }
 .createaccount-section{
     display: flex;
@@ -349,8 +418,8 @@ input:focus{
 }
 #stepback{
     text-align: left;
-    font-weight: 650;
-    font-size: 15px;
+    font-weight: 500;
+    font-size: 14px;
     letter-spacing: 0px;
     color: #222222;
     opacity: 1;
@@ -369,7 +438,7 @@ input:focus{
 }
 .createtext{
     text-align: left;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
@@ -409,9 +478,40 @@ input:focus{
     font-weight: 600;
     font-size: 14px;
 }
-#school-error, #state-error, #city-error, #county-error, #zipcode-error {
+#school-error{
     color: red;
-    font-size: 13px; 
+    font-size: 12px;
+    font-weight: 600;
+    height: 24px;
+}
+#state-error{
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
+    height: 24px;
+}
+#city-error{
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
+    height: 24px;
+}
+#county-error{
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
+    height: 24px;
+}
+#zipcode-error{
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
+    height: 24px;
+}
+#checkbox-error{
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 @media (max-width:991px){

@@ -71,7 +71,7 @@ return true;
 }
 
 function validateForm(){
-    if(!validateEmail() || !validatePswd()){
+    if(!(validateEmail() || validatePswd())){
         return false;
          //loginBtn.classList.add("disable");
          //card.style.Height="500px";

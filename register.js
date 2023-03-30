@@ -5,13 +5,12 @@ var Mobilerr = document.getElementById('number-error');
 var Passerr = document.getElementById('password-error');
 var Confirmerr = document.getElementById('confirmPass-error');
 
-
 function validateFirstname(){
     var fname = document.getElementById('floatingfName').value;
 	if(fname.length ==""){
 		Firstnamerr.style.visibility="visible";
 		Firstnamerr.innerHTML='*Please enter firstname';
-		document.getElementById("floatingfName").style.borderBottom = "2px solid #386CB5";
+		document.getElementById("floatingfName").style.borderBottom = "2px solid red";
 		return false;
 	}
 	else{
@@ -25,7 +24,7 @@ function validateLastname(){
 	if(lname.length ==""){
 		Lastnamerr.style.visibility="visible";
 		Lastnamerr.innerHTML='*Please enter lastname';
-		document.getElementById("floatinglName").style.borderBottom = "2px solid #386CB5";
+		document.getElementById("floatinglName").style.borderBottom = "2px solid red";
 		return false;
 	}
 	else {
@@ -55,7 +54,6 @@ function validateEmail(){
     else {
         Emailerr.style.visibility="hidden";
         document.getElementById("contact-email").style.borderBottom = "1px solid #ced4da";
-        document.getElementById("Emailjs").style.marginBottom = "1px";
     }
 return true;
 }
@@ -109,7 +107,13 @@ function validatePswd() {
 function matchPassword() {  
   var pw1 = document.getElementById("contact-password").value;  
   var pw2 = document.getElementById("confirm-password").value;  
-  if(pw1 != pw2)  
+  if(pw2.length == 0){
+	Confirmerr.style.visibility="visible";
+	Confirmerr.innerHTML="*Please enter password"
+	document.getElementById('confirm-password').style.borderBottom = "2px solid red";
+	return false;
+  }
+  else if(pw1 != pw2)  
   {   
     Confirmerr.style.visibility="visible";
 	Confirmerr.innerHTML="*Password doesn't match"
@@ -124,15 +128,14 @@ function matchPassword() {
 
 
 function validateForm(){
-    if(!(validateFirstname() ||  validateLastname() || validateEmail() || validateMobileno() || validatePswd() || matchPassword())){
+    if(!(validateFirstname() &&  validateLastname() && validateEmail() && validateMobileno() && (validatePswd() || matchPassword()) )){
          //loginBtn.classList.add("disable");
-		 window.alert("Please enter all the details to register!");
+		 //window.alert("Please enter all the details to register!");
         //Suberr.innerHTML='*Please enter details in all feilds to submit';
         return false;
     }
     else{
-        window.alert("Details saved successfully! you can now login");
-		//window.location.href = "login.html";
+		Next();
     }
     return true;
 }
@@ -159,8 +162,49 @@ function getIp(callback) {
        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
    });
 
+
+   const togglePassword = document.querySelector('#eye-img');
+   const password = document.querySelector('#contact-password');
+   togglePassword.addEventListener('click', function (e) {
+	   // toggle the type attribute
+	   const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+	   password.setAttribute('type', type);
+	   
+   });
+   
+   function changeImage() {
+	   var image = document.getElementById('eye-img');
+	   if (image.src.match("eye-closed")) {
+		   image.src = "img/eye.png";
+	   }
+	   else {
+		   image.src = "img/eye-closed.png";
+	   }
+   }
+
+   const togglePass = document.querySelector('#eyes-img');
+   const Confirmpassword = document.querySelector('#confirm-password');
+   togglePass.addEventListener('click', function (e) {
+	   // toggle the type attribute
+	   const type = Confirmpassword.getAttribute('type') === 'password' ? 'text' : 'password';
+	   Confirmpassword.setAttribute('type', type);
+	   
+   });
+   
+   function ConfirmchangeImage() {
+	   var image = document.getElementById('eyes-img');
+	   if (image.src.match("eye-closed")) {
+		   image.src = "img/eye.png";
+	   }
+	   else {
+		   image.src = "img/eye-closed.png";
+	   }
+   }
+
+
 /**** next-prev button *****/
    function Next(){
+	    document.getElementById("card-width").style.width = "73%"
 		document.getElementById("step1").style.display = "none";
 		document.getElementById("step2").style.display = "block"
 		document.getElementsByClassName("step1")[0].style.color="#AFC4E1";
@@ -169,6 +213,7 @@ function getIp(callback) {
 		document.getElementsByClassName("hrstep2")[0].style.background="#386CB5";
 	    }
    function prev(){
+	   document.getElementById("card-width").style.width = "67%"
 	   document.getElementById("step1").style.display = "block";
 	   document.getElementById("step2").style.display = "none";
 	   document.getElementsByClassName("step1")[0].style.color="#386CB5";
@@ -180,42 +225,30 @@ function getIp(callback) {
 
    /***validation for step2 ****/
 
-   // using spread syntax to convert collection to array forEach is an array method
- [...document.getElementsByTagName("input")].forEach(function(item) {
-	// adding eventListener to the elements
-	item.addEventListener('keypress', function() {
-	  // calling the methods
-	  // this.id will be the id of the clicked button
-	  // there is a method in the object by same name, which will be trigger
-	  obj[this.id]();
-  
-	})
-})
 
-var Schlerr = document.getElementById('school-error');
-var Staterr = document.getElementById('state-error');
-var Cityerr = document.getElementById('city-error');
-var Countryerr = document.getElementById('county-error');
-var Ziperr = document.getElementById('zipcode-error');
+   var Schlerr = document.getElementById('school-error');
+   var Staterr = document.getElementById('state-error');
+   var Cityerr = document.getElementById('city-error');
+   var Countryerr = document.getElementById('county-error');
+   var Ziperr = document.getElementById('zipcode-error');
   
-  var obj = {
-	schoolName: function() {
-	  console.log('schoolName');
+
+	function schlvalidate() {
 	  var schlName = document.getElementById('schoolName').value;
-	  if(schlName.length ==""){
-		Schlerr.style.visibility="visible";
-		Schlerr.innerHTML='*Please enter school name';
-		document.getElementById("schoolName").style.borderBottom = "2px solid red";
-		return false;
+	   if(schlName.length ==""){
+		 Schlerr.style.visibility="visible";
+		 Schlerr.innerHTML='*Please enter school name';
+		 document.getElementById("schoolName").style.borderBottom = "2px solid red";
+		 return false;
 	  }
 	  else {
-		Schlerr.style.visibility="hidden";
-		document.getElementById("schoolName").style.borderBottom = "1px solid #ced4da";
+		 Schlerr.style.visibility="hidden";
+		 document.getElementById("schoolName").style.borderBottom = "1px solid #ced4da";
 	  }
 	  return true;
-	},
-	stateName: function() {
-	  console.log('stateName');
+	}
+
+	function stateValidate() {
 	  var stateName = document.getElementById('stateName').value;
 	  if(stateName.length ==""){
 		Staterr.style.visibility="visible";
@@ -228,9 +261,9 @@ var Ziperr = document.getElementById('zipcode-error');
 		document.getElementById("stateName").style.borderBottom = "1px solid #ced4da";
 	  }
 	  return true;
-	},
-	cityName: function() {
-	  console.log('cityName');
+	}
+
+	function cityValidate() {
 	  var cityName = document.getElementById('cityName').value;
 	  if(cityName.length ==""){
 		Cityerr.style.visibility="visible";
@@ -243,8 +276,9 @@ var Ziperr = document.getElementById('zipcode-error');
 		document.getElementById("cityName").style.borderBottom = "1px solid #ced4da";
 	  }
 	  return true;
-	},
-	countryName: function() {
+	}
+
+	function countryValidate() {
 	  console.log('countryName');
 	  var countryName = document.getElementById('countryName').value;
 	  if(countryName.length ==""){
@@ -258,8 +292,9 @@ var Ziperr = document.getElementById('zipcode-error');
 		document.getElementById("countryName").style.borderBottom = "1px solid #ced4da";
 	  }
 	  return true;
-	},
-	zipcode: function() {
+	}
+
+	function zipcodeValidate() {
 	  console.log('zipcode');
 	  var zipcode = document.getElementById('zipcode').value;
 	  if(zipcode.length ==""){
@@ -274,7 +309,8 @@ var Ziperr = document.getElementById('zipcode-error');
 	  }
 	  return true;
 	}
-  }
+  
+
 
 /**zipcode **/
 function onlyNumberKey(evt) {            
@@ -283,4 +319,40 @@ function onlyNumberKey(evt) {
 	if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
 		return false;
 	return true;
+}
+
+function alphaOnly(event) {
+	var key = event.keyCode;
+	return ((key >= 65 && key <= 90) || key == 8);
+  };
+
+/**Checkbox Validation***/
+function policyChecked() {
+	  // get the checkbox element from the DOM using the getElementId function
+	  let checkbox=document.getElementById("flexCheckChecked");
+	  // get the text element to display the status of the checkbox
+	  let checkboxErr=document.getElementById("checkbox-error");
+	  // use the checked property to check if the checkbox is checked
+	  if (checkbox.checked){
+		  // display result by assigning to innerHTML of the text element.
+		  checkboxErr.style.visibility="hidden";
+		  checkboxErr.innerHTML="Thank you for accepting the agreement";
+	  }
+	  else{
+		checkboxErr.style.visibility="visible";
+		checkboxErr.innerHTML = "*Please accept the polices to proceed";
+	  }
+}
+
+function step2Validation() {
+	if(!(schlvalidate() &&  stateValidate() && cityValidate() && countryValidate() &&  policyChecked() && zipcodeValidate() || onlyNumberKey())){
+		//loginBtn.classList.add("disable");
+		//window.alert("Please enter all the details to register!");
+	   //Suberr.innerHTML='*Please enter details in all feilds to submit';
+	   return false;
+   }
+   else{
+	   window.alert("Your account is created, you can now login!")
+	   window.href="login.html"
+   }
 }

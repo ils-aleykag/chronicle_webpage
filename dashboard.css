@@ -214,13 +214,13 @@ body {
   }
   .circle-icon {
     border-radius: 50%;
-   /* line-height: 30px;
-    vertical-align: middle; */
-    padding: 14px;
-    /*width: 60px;
-    height: 60px; */
+    padding: 13px;
     opacity: 1;
     color: white;
+   /* line-height: 30px;
+     vertical-align: middle; 
+     width: 60px;
+     height: 60px; */
 }
  /* .card > span {
     font-size: 33px;
@@ -261,14 +261,21 @@ body {
   }
   
   .card-inner > span {
-      font-size: 26px;
+      font-size: 22px;
   }
   
+  /*******Charts*****/ 
   .charts {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
+
+ /* canvas{
+    width:500px !important;
+    height:500px !important;
+  
+  } */
   
   .charts-card {
     margin-bottom: 20px;
