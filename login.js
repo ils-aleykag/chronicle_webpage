@@ -1,6 +1,6 @@
 var Emailerr = document.getElementById('email-error');
 var Passerr = document.getElementById('password-error');
-//var loginBtn = document.getElementById('loginbtn');
+
 
 const togglePassword = document.querySelector('#eye-img');
 const password = document.querySelector('#contact-password');
@@ -10,7 +10,6 @@ togglePassword.addEventListener('click', function (e) {
     password.setAttribute('type', type);
     
 });
-
 function changeImage() {
     var image = document.getElementById('eye-img');
     if (image.src.match("eye-closed")) {
@@ -25,17 +24,18 @@ function changeImage() {
 
 function validateEmail(){
     var email = document.getElementById('contact-email').value;
+    var matchEml = window.localStorage.getItem('emailid');
    // sessionStorage.setItem('EmailId', email);
-    var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
+   // var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
     if(email.length == ""){
         Emailerr.style.visibility="visible";
         Emailerr.innerHTML='*Please enter your email address';
         document.getElementById("contact-email").style.borderBottom = "2px solid red";
         return false;
     }
-    else if(!regEmail.test(email)){
+    else if(email != matchEml){
         Emailerr.style.visibility="visible";
-        Emailerr.innerHTML='*Please enter valid email address';
+        Emailerr.innerHTML='*Please enter correct email address';
         document.getElementById("contact-email").style.borderBottom = "2px solid red";
         return false;
     }
@@ -45,8 +45,11 @@ function validateEmail(){
     }
 return true;
 }
+
+
 function validatePswd(){
     var password = document.getElementById('contact-password').value;
+    var matchPss = window.localStorage.getItem('Password');
     //sessionStorage.setItem('Password', password);
     console.log(password);
     if(password.length == 0){
@@ -56,13 +59,13 @@ function validatePswd(){
         document.getElementById("contact-email").style.display="block";
         return false;
     }
-    else if(password!="Aleyka@123") {
-        Passerr.innerHTML='*Password is not valid, enter correct password!';
+    else if(password!=matchPss) {
+        Passerr.innerHTML='*Password is wrong, enter correct password!';
         Passerr.style.visibility="visible";
         document.getElementById('contact-password').style.borderBottom = "2px solid red";
         return false;
     }
-    else if(password == "Aleyka@123") {
+    else if(password == matchPss) {
         document.getElementById('contact-password').style.borderBottom = "1px solid #ced4da";
         Passerr.style.visibility="hidden";
     }
@@ -73,12 +76,8 @@ return true;
 function validateForm(){
     if(!(validateEmail() || validatePswd())){
         return false;
-         //loginBtn.classList.add("disable");
-         //card.style.Height="500px";
-        //Suberr.innerHTML='*Please enter details in all feilds to submit';
     }
     else{
-       // window.alert("LogedIn successfully!");
         window.location.href = "dashboard.html";
     }
     return true;

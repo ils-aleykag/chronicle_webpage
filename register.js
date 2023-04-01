@@ -39,7 +39,8 @@ function validateLastname(){
 
 function validateEmail(){
     var email = document.getElementById('contact-email').value;
-    sessionStorage.setItem('EmailId', email);
+	window.localStorage.setItem('emailid', email);
+    //sessionStorage.setItem('EmailId', email);
     var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
     if(email.length == ""){
         Emailerr.style.visibility="visible";
@@ -86,6 +87,7 @@ return true;
 
 function validatePswd() {
 	var password = document.getElementById('contact-password').value;
+	window.localStorage.setItem('Password', password);
     sessionStorage.setItem('Password', password);
 	var regPass = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{6,}$/ ;
     if(password.length == 0){
