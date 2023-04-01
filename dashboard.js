@@ -16,6 +16,13 @@ function closeSidebar() {
   }
 }
 
+var Fname = window.localStorage.getItem('firstname');
+let Lname = window.localStorage.getItem('lastname');
+console.log(Fname);
+console.log(Lname);
+document.getElementById('user-name').innerHTML=Fname+' '+Lname;
+
+/** DROPDOWN **/
 
 // When the user clicks on the button, toggle between hiding and showing the dropdown content 
 function myFunction(e) {
@@ -94,7 +101,8 @@ new Chart("bar-chart", {
       },
     },
     responsive: true,
-    aspectRatio: 2
+    aspectRatio: 2,
+    maintainAspectRatio: true
   },
 });
 
@@ -156,6 +164,7 @@ new Chart("pie-chart", {
     
     },
     responsive: true,
+    maintainAspectRatio: true,
     aspectRatio: 2,
     rotation : 210, 
     borderAlign: "inner",
