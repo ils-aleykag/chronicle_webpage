@@ -523,3 +523,12 @@ hr {
         width:250px;
       }
 }
+
+@media (max-width: 767px){
+    #logo{
+        width: 200px;
+    }
+    .card{
+        width: 100% !important;
+     }
+}

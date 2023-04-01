@@ -5,8 +5,10 @@ var Mobilerr = document.getElementById('number-error');
 var Passerr = document.getElementById('password-error');
 var Confirmerr = document.getElementById('confirmPass-error');
 
+
 function validateFirstname(){
     var fname = document.getElementById('floatingfName').value;
+	window.localStorage.setItem('firstname', fname);
 	if(fname.length ==""){
 		Firstnamerr.style.visibility="visible";
 		Firstnamerr.innerHTML='*Please enter firstname';
@@ -21,6 +23,7 @@ function validateFirstname(){
 }
 function validateLastname(){
 	var lname = document.getElementById('floatinglName').value;
+	window.localStorage.setItem('lastname', lname);
 	if(lname.length ==""){
 		Lastnamerr.style.visibility="visible";
 		Lastnamerr.innerHTML='*Please enter lastname';
