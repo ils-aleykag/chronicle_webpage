@@ -20,7 +20,7 @@ var Fname = window.localStorage.getItem('firstname');
 let Lname = window.localStorage.getItem('lastname');
 console.log(Fname);
 console.log(Lname);
-document.getElementById('user-name').innerHTML=Fname+' '+Lname;
+document.getElementById('user-name').innerHTML=Fname+''+Lname;
 
 /** DROPDOWN **/
 
@@ -166,7 +166,7 @@ new Chart("pie-chart", {
     responsive: true,
     maintainAspectRatio: true,
     aspectRatio: 2,
-    rotation : 210, 
+    rotation : 220, 
     borderAlign: "inner",
   },
 });
