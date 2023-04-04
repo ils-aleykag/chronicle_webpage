@@ -171,6 +171,8 @@ input:focus{
        border-radius: 6px;
        opacity: 1;
        border-right: none;
+       /**border-top-right-radius: 0px;
+       border-bottom-right-radius: 0px; **/
 }
 #input_img_1{
     height: 12px;
@@ -190,7 +192,15 @@ input:focus{
   border-bottom-right-radius: 6px;
   border-left: none;
   font-size: 14px;
-}
+} 
+/**#floatingInput {
+    height: 43px;
+    width: 271px;
+    border: 1px solid #DDDDDD;
+    border-left: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}**/
 #email-error{
     color: red;
     font-size: 12px;
