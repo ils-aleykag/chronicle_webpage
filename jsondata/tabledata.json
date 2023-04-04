@@ -1,0 +1,40 @@
+{
+    "SchoolInfo": [
+        {
+            "SchoolLogo": "img/schl.jpg", 
+            "schoolName": "School_Name,", 
+            "small" : "<i>School name goes here…</i>",
+            "email": "school_name@email.com", 
+            "phone": "+91 731 987 321, +91 98765 43210", 
+            "schoolSize": "176 / 12", 
+            "dataUsage": 256, 
+            "totalData":500, 
+            "status": "Active", 
+            "Link":"#"
+        },
+        {
+            "SchoolLogo": "img/schl2.jpg", 
+            "schoolName": "Queen’s College", 
+            "small" : "",
+            "email": "Queen'scollege@email.com", 
+            "phone": "+91 731 987 321, +91 98765 43210", 
+            "schoolSize": "225 / 18", 
+            "dataUsage": 103, 
+            "totalData":500, 
+            "status": "Active", 
+            "Link":"#"
+        },
+        {
+            "SchoolLogo": "img/schl3.jpg", 
+            "schoolName": "Golden International School", 
+            "small" : "",
+            "email": "Goldeninternationalschool@email.com", 
+            "phone": "+91 731 987 321, +91 98765 43210", 
+            "schoolSize": "364 / 30", 
+            "dataUsage": 324, 
+            "totalData":500, 
+            "status": "Active", 
+            "Link":"#"
+        }
+    ]
+}

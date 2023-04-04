@@ -1,6 +1,4 @@
 body {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     background-color: #e6e8ed;
   } 
@@ -30,9 +28,6 @@ body {
     width: 100% !important;
     height: 165px;
     background: #487FCC 0% 0% no-repeat padding-box;
-    box-shadow: 0px 1px 4px #15223214;
-    opacity: 1;
-    /* z-index: 1; */
     position: absolute;
   }
   
@@ -42,7 +37,6 @@ body {
   .main-title {
     margin-left: 260px;
     color: #FFFFFF;
-    opacity: 1;
   }
   .header-left{
      margin-top: -75px;
@@ -62,14 +56,6 @@ body {
     cursor: pointer;
     height: fit-content;
 }
- .btn{
-  text-align: left;
-  font-weight: 600;
-  letter-spacing: 0px;
-  color: #386CB5;
-  text-transform: uppercase;
-  opacity: 1;
-}
 .btn:focus{
     box-shadow: none;
 }
@@ -84,6 +70,14 @@ body {
     width: 13px;
 }
 
+#user-name{
+  top: -1px; 
+  margin-left: 3px; 
+  color: #FFFFFF; 
+  position: relative;  
+  overflow-x: hidden;
+}
+
 .dropdown-content{
   position:absolute;
   z-index: 999 !important;
@@ -94,7 +88,6 @@ body {
 }
 
 .dropdown-content a {
-  float: none;
   color: black;
   padding: 10px 14px;
   text-decoration: none;
@@ -113,10 +106,10 @@ body {
   background-color: #93b7eb;
   transition: all 2s;
 }
-
 .show {
   display: block;
 }
+
 
  
 
@@ -218,7 +211,7 @@ body {
     margin-top: 1px;
   }
   
-  .card {
+  .main-cards .card{
     justify-content: space-around;
     padding: 16px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -226,46 +219,36 @@ body {
     border-radius: 10px;
     opacity: 1;
   }
-  .circle-icon {
+  .main-cards .circle-icon {
     border-radius: 50%;
-    padding: 13px;
     opacity: 1;
     color: white;
-   /* line-height: 30px;
-     vertical-align: middle; 
-     width: 60px;
-     height: 60px; */
+    line-height: 9px; 
+    padding: 13px; 
+    font-size: 17px;
+    text-align: center;
+     width: 45px;
+     height: 45px; 
 }
- /* .card > span {
-    font-size: 33px;
+
+  .main-cards .font-weight-bold {
     font-weight: 600;
-    position: relative;
-    text-align: left;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-  } */
-  sub {
+    font-size: 28px;
+  }
+  .main-cards sub {
     font-size: 14px;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
   }
-  .card > small {
-    margin-top: 10px;
-    font-size: 16px;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 0.4;
-  }
-  .card-inner {
+  .main-cards .card-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: -11px;
   }
   
-  .card-title > p {
+  .main-cards .card-title > p {
     text-align: left;
     font-weight: 500;
     letter-spacing: 0px;
@@ -273,10 +256,32 @@ body {
     text-transform: uppercase;
     opacity: 0.4;
   }
-  
-  .card-inner > span {
-      font-size: 22px;
+  .main-cards .end-line{
+    margin-top: 10px;
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 0.4;
   }
+  
+
+.main-cards div:nth-child(1) .circle-icon{
+    background: transparent linear-gradient(158deg, #6D6AE3 0%, #6664D8 100%) !important;
+}
+
+.main-cards div:nth-child(2) .circle-icon{
+    background: transparent linear-gradient(158deg, #FB9A40 0%, #F88820 100%);
+}
+
+.main-cards div:nth-child(3) .circle-icon{
+    background: transparent linear-gradient(158deg, #FFC05D 0%, #F8A829 100%);
+}
+
+.main-cards div:nth-child(4) .circle-icon{
+    background: transparent linear-gradient(158deg, #44D58C 0%, #2CBE59 100%);
+}
+
+
   
   /*******Charts*****/ 
   .charts {
@@ -343,26 +348,22 @@ body {
       align-items: flex-end;
       margin-top: -44px;
   }
-  .form-check-label{
-    width: 33px;
-    text-align: left;
-    font-size:13px;
-    font-weight:400;
-    letter-spacing: 0px;
-    color: #444B48;
-    opacity: 1;
-  }
-  .form-check-input:checked {
-    /* border-color: #0d6efd; */
-    background: #F9AC32 0% 0% no-repeat padding-box;
-    border: none;
-}
 .datausge{
   text-align: left;
   font-size: 24px;
   font-weight: 500;
   letter-spacing: 0px;
   color: #444B48;
+  opacity: 1;
+}
+.chart-right .dropdown-toggle{
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC; 
+  border-radius: 3px; 
+  opacity: 1; 
+  font-size: 11px; 
+  font-weight: 300; 
+  color: #444B48; 
   opacity: 1;
 }
   /* Table */
