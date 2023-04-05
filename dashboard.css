@@ -76,6 +76,7 @@ body {
   color: #FFFFFF; 
   position: relative;  
   overflow-x: hidden;
+  width: 112px;
 }
 
 .dropdown-content{
@@ -164,8 +165,7 @@ body {
   
   .sidebar-list-item {
     padding: 20px 20px 20px 20px;
-    font-weight: 400;
-    font-size: 15px;
+   
   }
   
   .sidebar-list-item:hover {
@@ -175,13 +175,16 @@ body {
     transform: scale(1.1);
     font-weight: 600; 
   }
-  
-  .sidebar-list-item > .sidelist {
+  .sidebar-list-item > .fa-solid{
+     color: #7E84A3;
+     opacity: 1;
+  }
+  .sidebar-list-item > .sidelisttext{
     text-decoration: none;
     color: #171725;
     font-size: 14px;
     font-weight: 500;
-    margin-left: 8px;
+    margin-left: 11px;
   }
   
   .sidebar-responsive {
@@ -475,7 +478,7 @@ body {
       margin-top: 30px;
     }
     .dropdown-content {
-      width: 346%;
+      width: 309%;
       margin-left: -84px;
       margin-top: 11px;
     }
