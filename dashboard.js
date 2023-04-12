@@ -20,7 +20,7 @@ var Fname = window.localStorage.getItem('firstname');
 let Lname = window.localStorage.getItem('lastname');
 console.log(Fname);
 console.log(Lname);
-document.getElementById('user-name').innerHTML=Fname+''+Lname;
+document.getElementById('user-name').innerHTML=Fname+' '+Lname;
 
 /** DROPDOWN **/
 
@@ -43,7 +43,8 @@ Chart.register(ChartDataLabels);
 // ---------- CHARTS ----------
 
 // -------- bar chart --------
-var xValues = ["School_Name_01", "School_Name_02", "School_Name_03", "School_Name_04"];
+/** 
+var xValues = ["School_01", "School_02", "School_03", "School_04"];
 var barColors = "#F9AC32"; 
 
 new Chart("bar-chart", {
@@ -107,7 +108,7 @@ new Chart("bar-chart", {
 });
 
 //----Pie chart-----
-
+/*
 var xValues = ["Multimedia", "Audio Notes", "Notes","Free Space"];
 var yValues = [49, 23, 17, 11];
 var barColors = [
@@ -170,3 +171,4 @@ new Chart("pie-chart", {
     borderAlign: "inner",
   },
 });
+*/

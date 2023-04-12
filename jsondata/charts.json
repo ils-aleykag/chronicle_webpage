@@ -1,0 +1,65 @@
+{
+    "schoolSelect": [
+        {
+            "schoolName":"School_Name_01",
+            "multimedia": 100,
+            "audioNotes":80,
+            "notes": 55,
+            "freeSpace": 67,
+            "roster":{
+                "active":150,
+                "inactive": 50
+            },
+            "teachers": {
+                "active":60,
+                "inactive":20
+            }
+        },
+        {
+            "schoolName":"School_Name_02",
+            "multimedia": 80,
+            "audioNotes":200,
+            "notes": 55,
+            "freeSpace": 205,
+            "roster":{
+                "active":210,
+                "inactive": 90
+            },
+            "teachers": {
+                "active":300,
+                "inactive":100
+            }
+        },
+        {
+            "schoolName":"School_Name_03",
+            "multimedia": 49,
+            "audioNotes":23,
+            "notes": 17,
+            "freeSpace": 11,
+            "roster":{
+                "active":350,
+                "inactive": 50
+            },
+            "teachers": {
+                "active":150,
+                "inactive":40
+            }
+        },
+        {
+            "schoolName":"School_Name_04",
+            "multimedia": 110,
+            "audioNotes":68,
+            "notes": 44,
+            "freeSpace": 200,
+            "roster":{
+                "active":250,
+                "inactive":60
+            },
+            "teachers": {
+                "active":200,
+                "inactive":40
+            }
+        }
+
+    ]
+}

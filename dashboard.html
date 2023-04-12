@@ -6,43 +6,37 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+  <!--Open Sans -->
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+
+  <!--external css-->
   <link rel="stylesheet" href="dashboard.css">
+  <!------------------Font Awsome-------------------->
   <script src="https://kit.fontawesome.com/0c9e474dd2.js" crossorigin="anonymous"></script>
+  <!---------chart.js plugins-->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
   <script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
+   <!----Material UI icons-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <title>Dashboard</title>
 </head>
 <body>
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Dashboard</title>
-    <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="dashboard.css">
-  </head>
-
-  <body>
     <div class="grid-container">
 
       <!-- Header -->
       <header class="header">
-        <div class="menu-icon" onclick="openSidebar()" style="color: white; margin-top: -86px;">
+        <div class="menu-icon" onclick="openSidebar()" style="color: white; margin-top: -23px;">
           <span class="material-icons-outlined">menu</span>
         </div>
         <div class="header-left">
           <div class="main-title">
-            <p class="font-weight-bold" style="font-size: larger; margin-left: -35px;">Dashboard</p>
+            <p class="font-weight-bold" style="font-size: 16px">Dashboard</p>
           </div>
         </div>
         <div class="header-right">
-          <button class="btn me-md-2" id="addbtn" type="button" data-bs-toggle="modal"
-            data-bs-target="#exampleModal"><b>&#43;</b> ADD NEW SCHOOL</button>
+          <button class="btn" id="addbtn" type="button" data-bs-toggle="modal"
+            data-bs-target="#exampleModal"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;ADD NEW SCHOOL</button>
           <!-- Button trigger modal -->
 
           <!-- Modal -->
@@ -66,24 +60,24 @@
               </div>
             </div>
           </div>
-          <div class="position-relative" style="margin:  7px;">
+          <div class="position-relative" style="margin-right: 13px; margin-left: 10px;">
             <span class="rounded-circle position-absolute">2</span>
-            <span class="material-icons-outlined"
-              style="color: white; font-size: 24px; margin-top: -4px;">notifications</span>
+            <img src="img/bell.svg" width="19px" alt="">
           </div>
-          <div class="position-relative" style="margin:  7px;">
-            <div class="d-flex" style="margin-top: -5px;">
-              <span class="material-icons-outlined" style="color: white;">account_circle</span>
+          <div class="position-relative" style="margin:  2px;">
+            <div class="d-flex" style="margin-top: -3px;">
+              <span id="user-photo"><img width="30px" src="img/profileimg.jpg" alt=""></span>
               <span id="user-name" class="my-auto d-none d-md-block"></span>
               <!--<script>document.write(Fname);document.write(Lname)</script>&nbsp;</span>-->
               <i class="fa-solid fa-angle-down my-auto dropbtn"
-                style="top: 2px; margin-left: 4px; color: #FFFFFF; position: relative; padding: 5px; cursor:pointer;"
+                style="top: 2px; margin-left: 4px; color: #FFFFFF; position: relative; padding: 5px; cursor:pointer; font-size: 13px;
+                margin-right: 24px;"
                 onclick="myFunction(event)">
               </i>
             </div>
             <div class="dropdown-content d-none" id="myDropdown">
               <a href="#"><span class="fa fa-user"></span>&nbsp; &nbsp;View Profile</a>
-              <a href="#"><span class="fa fa-external-link"></span>&nbsp; &nbsp;Visit Website</a>
+              <a href="https://app.chroniclecloud.com/"><span class="fa fa-external-link"></span>&nbsp; &nbsp;Visit Website</a>
               <a href="#"><span class="fa fa-gears"></span>&nbsp; &nbsp;Help Center</a>
               <a href="login.html"><span class="fa fa-sign-out"></span>&nbsp; &nbsp;Sign out</a>
             </div>
@@ -97,27 +91,32 @@
         <div class="sidebar-title">
           <div class="sidebar-brand">
             <img src="img/Group 12562.svg">
+             <hr>
           </div>
           <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
         </div>
-        <hr>
-        <ul class="sidebar-list">
-          <li class="sidebar-list-item">
-            <span class="fa-solid fa fa-th"></span><span class="sidelisttext"> Dashboard</span>
-          </li>
-          <li class="sidebar-list-item">
-            <span class="fa-solid fa-building"></span><span class="sidelisttext"> Manage Schools</span>
-          </li>
-          <li class="sidebar-list-item">
-            <span class="fa-solid fa-user-tie"></span><span class="sidelisttext">Manage Teacher</span>
-          </li>
-          <li class="sidebar-list-item">
-            <span class="fa-solid fa-user"></span><span class="sidelisttext">Manage Roster</span>
-          </li>
-          <li class="sidebar-list-item">
-            <span class="fa-solid fa-list"></span><span class="sidelisttext">Manage Classes</span>
-          </li>
-        </ul>
+        <div class="sidebar-list">
+          <div class="sidebar-list-item">
+            <img src="img/dashboard.svg">
+            <span class="sidelisttext"> Dashboard</span>
+          </div>
+          <div class="sidebar-list-item">
+            <img src="img/schoolGrey.svg">
+            <span class="sidelisttext"> Manage Schools</span>
+          </div>
+          <div class="sidebar-list-item">
+            <img src="img/teacherGrey.svg">
+            <span class="sidelisttext">Manage Teacher</span>
+          </div>
+          <div class="sidebar-list-item">
+            <img src="img/groupGrey.svg">
+            <span class="sidelisttext">Manage Roster</span>
+          </div>
+          <div class="sidebar-list-item">
+            <img src="img/classGrey.svg">
+            <span class="sidelisttext">Manage Classes</span>
+          </div>
+        </div>
       </aside>
       <!-- End Sidebar -->
 
@@ -125,37 +124,41 @@
       <div class="blank" style="height: 59px"></div>
       <main class="main-container">
         <!------card-------->
-        <div class="main-cards" id="card" style="width: 90%;"> </div>
+        <div class="main-cards" id="card" style="width: 92%;"> </div>
 
-        <!--------------Charts---------------->
+        <!--------------Charts----------------    heading d-flex justify-content-between--->
 
-        <div class="charts" style="width: 90%;">
+        <div class="charts" style="width: 92%;">
           <div class="charts-card">
-            <div class="chart-title">
+            <div class="chart-title"> 
               <div class="chart-left">
-                <p><u class="underline">Roster</u><span class="lgtext">&nbsp; | Teachers</span></p>
+                  <span><a class="active" href="#">Roster</a></span> | 
+                  <span><a  href="#">Teachers</a></span>
               </div>
-            </div>
-             <canvas id="bar-chart"></canvas>
+              <div class="chart-right" id="radiobtn">
+                  <button id="active"><span></span> <span></span></button>
+                  <button id="inactive"><span></span> <span></span></button>
+              </div>
+           </div>
+           <div class="position-relative">
+              <canvas id="bar-chart" ></canvas>
+           </div>
           </div>
           <div class="charts-card">
-            <div class="chart-title">
-              <div class="chart-left">
-                <p class="datausge">Data Usage</p>
+            <div class="chart-title"> 
+              <div class="chart-left" style="font-weight: 600;">
+                Data Usage
               </div>
-              <div class="chart-right">
-                <div class="dropdown">
-                  <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">School_name_03</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"> School_name_01</a></li>
-                    <li><a class="dropdown-item" href="#"> School_name_02</a></li>
-                    <li><a class="dropdown-item" href="#"> School_name_04</a></li>
-                  </ul>
-                </div>
+              <select class="form-select form-select-sm" id="select-school" style="width: fit-content; font-size: 12px;">
+                  
+              </select>
+           </div>
+           <div class="position-relative">
+              <div>
+                <canvas id="pie-chart"></canvas>
               </div>
-            </div>
-             <canvas id="pie-chart"></canvas>
-          </div>
+           </div>
+         </div>
         </div>
 
 
@@ -185,11 +188,12 @@
   </div>
     
     <!-- Scripts -->
-    <!-- Custom JS -->
+  
     <script src="dashboard.js"></script>
+    <script type="module" src="Dynamicdata.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"></script>
-    <script type="module" src="Dynamicdata.js"></script>
-</html>
+   
 </body>
+</html>

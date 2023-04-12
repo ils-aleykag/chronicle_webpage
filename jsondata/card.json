@@ -4,7 +4,7 @@
             "cardtitle": "SCHOOL COUNT",
             "activeCases": "04",
             "status": "Active",
-            "iconCode":"f1ad",
+            "iconimg":"img/school.svg",
             "totalText":"Total Schools ",
             "totalnum": 12
         },
@@ -12,7 +12,7 @@
             "cardtitle": "TEACHER COUNT",
             "activeCases": "84",
             "status": "Active",
-            "iconCode": "f508",
+            "iconimg": "img/teacher.svg",
             "totalText":"Total Teacher",
             "totalnum": 98
         },
@@ -20,7 +20,7 @@
             "cardtitle": "ROSTER COUNT",
             "activeCases": "1256",
             "status": "Active",
-            "iconCode": "f0c0",
+            "iconimg": "img/group.svg",
             "totalText":"Total Roster",
             "totalnum": 1307
         },
@@ -28,7 +28,7 @@
             "cardtitle": "CLASSES COUNT",
             "activeCases": "76",
             "status": "Active",
-            "iconCode": "f0ae",
+            "iconimg": "img/class.svg",
             "totalText":"Total Classes",
             "totalnum": 79
         }
