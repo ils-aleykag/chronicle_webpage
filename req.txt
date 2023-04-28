@@ -6,3 +6,7 @@ pytz       2023.3
 setuptools 65.5.0
 sqlparse   0.4.3
 tzdata     2023.3
+Django==4.2
+django-filter==23.1
+djangorestframework==3.14.0
+requests==2.28.2
