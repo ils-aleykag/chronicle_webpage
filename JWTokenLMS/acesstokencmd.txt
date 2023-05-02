@@ -1,0 +1,20 @@
+
+to generate access and refreshtoken tokens:
+http POST http://127.0.0.1:8000/gettoken/ username="user" password="aleykagazdhar"
+access token validaty is of 5 min after which it expires, so to get new token use refresh token and to verify the access token
+use verifytoken
+verifytoken: 
+http POST http://127.0.0.1:8000/verifytoken/ token=""
+refreshtoken:
+http POST http://127.0.0.1:8000/refreshtoken/ refresh=" "
+
+API access using token:
+get:
+http http://127.0.0.1:8000/bookapi/ 'Authorization:Bearer (paste)'
+post:
+http -f POST http://127.0.0.1:8000/bookapi/ bookname=abc author=cde isbn=1234567543208 'Authorization: Bearer <pasteacesstoken>'
+update:
+http PUT http://127.0.0.1:8000/bookapi/3/ bookname=abc author=gazdhar isbn=675412345678 'Authorization: Bearer <pasteacesstoken>'
+delete:
+http DELETE http://127.0.0.1:8000/bookapi/3 'Authorization: Bearer <pasteacesstoken>'
+
